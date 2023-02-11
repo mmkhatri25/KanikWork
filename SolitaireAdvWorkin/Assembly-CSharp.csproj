@@ -1,0 +1,1712 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <CscToolPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Tools/RoslynScripts</CscToolPath>
+    <CscToolExe>unity_csc.sh</CscToolExe>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{AFAC4CB0-8CB9-1CA4-AAF2-67AB9F38F12B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>.</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_2019_2_17;UNITY_2019_2;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_INCLUDE_TESTS;UNITY_PURCHASING;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_EVENT_QUEUE;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VR;ENABLE_AR;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;UNITY_ASTC_ONLY_DECOMPRESS;ANDROID_USE_SWAPPY;ENABLE_ONSCREEN_KEYBOARD;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;ENABLE_DATA_LOCAL;ENABLE_ASSET_ONLINE;DEFINE_ADMOB;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoConfig>true</NoConfig>
+    <NoStdLib>true</NoStdLib>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+    <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
+    <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>Android:13</UnityBuildTarget>
+    <UnityVersion>2019.2.17f1</UnityVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="UnityEngine">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\AndroidNativeFunctions\demo\AndroidNativeFunctionsExample.cs" />
+    <Compile Include="Assets\AndroidNativeFunctions\demo\nConsole.cs" />
+    <Compile Include="Assets\AndroidNativeFunctions\Scripts\AndroidNativeFunctions.cs" />
+    <Compile Include="Assets\Common\F4A\AndroidNativeFunctions\Scripts\AndroidNativeFunctions.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Examples\Scripts\ExamplesGUI.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Examples\Scripts\InfiniteRotator.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Examples\Scripts\ObscuredPerformanceTests.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Examples\Scripts\UsageExamples\DetectorsExamples.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Examples\Scripts\UsageExamples\ObscuredPrefsExamples.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Examples\Scripts\UsageExamples\ObscuredTypesExamples.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\Common\ACTkByte16.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\Common\ACTkByte4.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\Common\ACTkByte8.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\Common\ACTkConstants.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\Detectors\Abstract\ActDetectorBase.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\Detectors\Abstract\ACTkDetectorBase.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\Detectors\InjectionDetector.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\Detectors\ObscuredCheatingDetector.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\Detectors\SpeedHackDetector.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\Detectors\TimeCheatingDetector.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\Detectors\WallHackDetector.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\ObscuredTypes\ObscuredBool.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\ObscuredTypes\ObscuredByte.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\ObscuredTypes\ObscuredChar.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\ObscuredTypes\ObscuredDecimal.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\ObscuredTypes\ObscuredDouble.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\ObscuredTypes\ObscuredFloat.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\ObscuredTypes\ObscuredInt.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\ObscuredTypes\ObscuredLong.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\ObscuredTypes\ObscuredPrefs.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\ObscuredTypes\ObscuredQuaternion.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\ObscuredTypes\ObscuredSByte.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\ObscuredTypes\ObscuredShort.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\ObscuredTypes\ObscuredString.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\ObscuredTypes\ObscuredUInt.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\ObscuredTypes\ObscuredULong.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\ObscuredTypes\ObscuredUShort.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\ObscuredTypes\ObscuredVector2.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\ObscuredTypes\ObscuredVector2Int.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\ObscuredTypes\ObscuredVector3.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\ObscuredTypes\ObscuredVector3Int.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\Utils\ThreadSafeRandom.cs" />
+    <Compile Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Scripts\Utils\xxHash.cs" />
+    <Compile Include="Assets\Common\F4A\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
+    <Compile Include="Assets\Common\F4A\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
+    <Compile Include="Assets\Common\F4A\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
+    <Compile Include="Assets\Common\F4A\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
+    <Compile Include="Assets\Common\F4A\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
+    <Compile Include="Assets\Common\F4A\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
+    <Compile Include="Assets\Common\F4A\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+    <Compile Include="Assets\Common\F4A\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
+    <Compile Include="Assets\Common\F4A\Demigiant\DOTweenPro\DOTweenProShortcuts.cs" />
+    <Compile Include="Assets\Common\F4A\Demigiant\DOTweenPro\DOTweenTextMeshPro.cs" />
+    <Compile Include="Assets\Common\F4A\Demigiant\DOTweenPro\DOTweenTk2d.cs" />
+    <Compile Include="Assets\Common\F4A\F4AAssetBundle\Scripts\F4AAssetBundleManager.cs" />
+    <Compile Include="Assets\Common\F4A\F4AAssetBundle\Scripts\F4AAssetBundlesUtility.cs" />
+    <Compile Include="Assets\Common\F4A\F4ACore\Scripts\DataEncryption.cs" />
+    <Compile Include="Assets\Common\F4A\F4ACore\Scripts\DMCHelper.cs" />
+    <Compile Include="Assets\Common\F4A\F4ACore\Scripts\DMCMobileUtils.cs" />
+    <Compile Include="Assets\Common\F4A\F4ACore\Scripts\F4ACoreManager.cs" />
+    <Compile Include="Assets\Common\F4A\F4ACore\Scripts\F4ADebug.cs" />
+    <Compile Include="Assets\Common\F4A\F4ACore\Scripts\F4AEnum.cs" />
+    <Compile Include="Assets\Common\F4A\F4ACore\Scripts\F4AManager.cs" />
+    <Compile Include="Assets\Common\F4A\F4ACore\Scripts\F4AUtils.cs" />
+    <Compile Include="Assets\Common\F4A\F4ACore\Scripts\SF4AListenerManager.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Data\BaseDataController.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Data\DMCBaseDataInfo.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Data\DMCCoreDataInfo.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Data\IBaseDataInfo.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Data\SaveLoadDataManager.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\GenericObjectManager\GenericObjectManager.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\GenericObjectManager\UIDailyReward.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\GenericObjectManager\UILoadingPanel.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\AdsManager\AdsManager.AdColony.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\AdsManager\AdsManager.Admob.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\AdsManager\AdsManager.Chartboost.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\AdsManager\AdsManager.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\AdsManager\AdsManager.F4A.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\AdsManager\AdsManager.FacebookAds.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\AdsManager\AdsManager.InMobi.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\AdsManager\AdsManager.IronSource.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\AdsManager\AdsManager.Mopub.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\AdsManager\AdsManager.UnityAds.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\AdsManager\AdsManager.Vungle.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\AdsManager\AdsManager.WebViewScroll.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\AdsManager\IAdsManager.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\AdsManager\UIRowAppController.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\AdsManager\UIWebViewScrollController.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\Analytics\AnalyticManager.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\Analytics\AnalyticManager.Facebook.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\Analytics\EventsManager.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\Analytics\MixpanelManager.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\AppsFlyerManager.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\Audio\AudioManager.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\BuildManager.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\DailyReward\DailyRewardsCore.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\DailyReward\DailyRewardsManager.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\DailyReward\WorldClock.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\Firebase\FirebaseManager.Analytic.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\Firebase\FirebaseManager.Auth.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\Firebase\FirebaseManager.Crashlytic.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\Firebase\FirebaseManager.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\Firebase\FirebaseManager.Messaging.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\Firebase\FirebaseManager.RemoteConfig.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\IAPManager\IAPButton.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\IAPManager\IAPManager.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\OneSignalManager.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\PlayFabManager.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\ShephertzManager\ShephertzErrors.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\ShephertzManager\ShephertzManager.Administrator.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\ShephertzManager\ShephertzManager.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\ShephertzManager\ShephertzManager.GiftCode.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\SocialManager\GraphUtil.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\SocialManager\SocialManager.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\SocialManager\SocialManager.Facebook.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\SocialManager\SocialManager.GameServices.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Manager\TransactionSceneManager.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Others\DeviceController.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Others\DMCF4AConst.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Others\DMCFileUtilities.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Others\MiniJSON.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Others\RateUsPanel.cs" />
+    <Compile Include="Assets\Common\F4A\F4AMobileThird\Scripts\Others\Singleton.cs" />
+    <Compile Include="Assets\Common\F4A\F4ASplash\SplashScreenManager.cs" />
+    <Compile Include="Assets\Common\F4A\NativeShare\NativeShare.cs" />
+    <Compile Include="Assets\Common\F4A\PoolManager\PathologicalGames\PoolManager\PoolManager.cs" />
+    <Compile Include="Assets\Common\F4A\PoolManager\PathologicalGames\PoolManager\PreRuntimePoolItem.cs" />
+    <Compile Include="Assets\Common\F4A\PoolManager\PathologicalGames\PoolManager\SpawnPool.cs" />
+    <Compile Include="Assets\Common\F4A\Utils\BrightnessByRGBACameraV2\BrightnessByRGBACameraV2.cs" />
+    <Compile Include="Assets\Common\F4A\Utils\BrightnessByRGBACameraV2\BrightnessByRGBAProbeV2.cs" />
+    <Compile Include="Assets\Common\F4A\Utils\Scripts\DebugConsole.cs" />
+    <Compile Include="Assets\Common\F4A\ZeichenKraftwerk\CryptoPlayerPrefs\CPlayerPrefs.cs" />
+    <Compile Include="Assets\Common\F4A\ZeichenKraftwerk\CryptoPlayerPrefs\CryptoPlayerPrefsX.cs" />
+    <Compile Include="Assets\SolitaireIsland\New\Scripts2\GameConfigManager.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\CardConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\ChapterScheduleData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\CI\WSANative\Facebook\Core\WSAFacebookConstants.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\CI\WSANative\Facebook\Core\WSAFacebookDataResponse.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\CI\WSANative\Facebook\WSAFacebookAgeRange.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\CI\WSANative\Facebook\WSAFacebookError.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\CI\WSANative\Facebook\WSAFacebookLoginResult.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\CI\WSANative\Facebook\WSAFacebookPicture.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\CI\WSANative\Facebook\WSAFacebookPictureData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\CI\WSANative\Facebook\WSAFacebookResponse`1.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\CI\WSANative\Facebook\WSAFacebookUser.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\CI\WSANative\Facebook\WSANativeFacebook.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\com\adjust\sdk\Adjust.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\com\adjust\sdk\AdjustAttribution.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\com\adjust\sdk\AdjustConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\com\adjust\sdk\AdjustEnvironment.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\com\adjust\sdk\AdjustEnvironmentExtension.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\com\adjust\sdk\AdjustEvent.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\com\adjust\sdk\AdjustEventFailure.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\com\adjust\sdk\AdjustEventSuccess.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\com\adjust\sdk\AdjustLogLevel.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\com\adjust\sdk\AdjustLogLevelExtension.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\com\adjust\sdk\AdjustSessionFailure.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\com\adjust\sdk\AdjustSessionSuccess.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\com\adjust\sdk\AdjustUtils.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\com\adjust\sdk\JSON.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\com\adjust\sdk\JSONArray.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\com\adjust\sdk\JSONBinaryTag.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\com\adjust\sdk\JSONClass.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\com\adjust\sdk\JSONData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\com\adjust\sdk\JSONLazyCreator.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\com\adjust\sdk\JSONNode.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\CombineMeshInfo.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\ActionData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\ActionFrame.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\ActionTimelineState.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\ActionType.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\Animation.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\AnimationConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\AnimationData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\AnimationFadeOutMode.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\AnimationState.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\Armature.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\ArmatureData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\ArmatureDisplayData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\ArmatureType.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\BaseFactory.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\BaseObject.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\BinaryDataParser.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\BinaryDataReader.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\BinaryDataWriter.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\BinaryOffset.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\BlendMode.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\BlendState.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\Bone.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\BoneAllTimelineState.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\BoneData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\BonePose.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\BoneRotateTimelineState.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\BoneScaleTimelineState.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\BoneTimelineState.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\BoneTranslateTimelineState.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\BoundingBoxData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\BoundingBoxDisplayData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\BoundingBoxType.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\BuildArmaturePackage.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\CanvasData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\ClockHandler.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\ColorTransform.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\Constraint.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\ConstraintData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\ConstraintTimelineState.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\DataParser.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\DeformTimelineState.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\DeformVertices.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\DisplayData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\DisplayType.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\DragonBoneEventDispatcher.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\DragonBones.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\DragonBonesData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\DragonBonesExtensions.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\EllipseBoundingBoxData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\EventObject.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\Helper.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\IAnimatable.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\IArmatureProxy.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\IEventDispatcher`1.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\IKConstraint.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\IKConstraintData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\IKConstraintTimelineState.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\ImageDisplayData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\LogHelper.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\Matrix.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\MeshBuffer.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\MeshDisplayData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\ObjectDataParser.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\OffsetMode.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\OutCode.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\PathDisplayData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\Point.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\PolygonBoundingBoxData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\Rectangle.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\RectangleBoundingBoxData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\SkinData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\Slot.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\SlotColorTimelineState.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\SlotData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\SlotDislayTimelineState.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\SlotTimelineState.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\SortingMode.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\SurfaceData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\TextureAtlasData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\TextureData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\TimelineData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\TimelineState.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\TimelineType.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\Transform.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\TransformObject.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\TweenState.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\TweenTimelineState.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\TweenType.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\UnityArmatureComponent.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\UnityCombineMeshs.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\UnityDragonBonesData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\UnityEventDispatcher`1.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\UnityFactory.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\UnityFactoryHelper.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\UnitySlot.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\UnityTextureAtlasData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\UnityTextureData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\UnityUGUIDisplay.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\UserData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\VerticesData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\WeightData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\WorldClock.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\DragonBones\ZOrderTimelineState.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\ExtraConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\FloatEffect.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\FullScreenGuide.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Guide.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\I2\MiniGames\MiniGame.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\I2\MiniGames\MiniGame_Reward.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\I2\MiniGames\PrizeWheel.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\I2\MiniGames\PrizeWheel_Reward.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\I2\MiniGames\UnityEventAudioClip.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\I2\MiniGames\UnityEventFloat.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\I2\MiniGames\UnityEventInt.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\I2\MiniGames\UnityEventString.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\I2\MiniGames\UnityEventTransform.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\I2\MiniGames\UnityEventTreasureHunt.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\I2\RenameAttribute.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\IslandLineEffect.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\ListenerDelegate.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\LoadBaseSceneHandler.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\MiniJSON\Json.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\NativeToolkit.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Ads\AdmobVideoAd.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Ads\BaseVideoAd.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Ads\FacebookVideoAd.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Ads\MicrosoftVideoAd.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Ads\ThirdPartyAdData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Ads\ThirdPartyAdManager.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Ads\ThirdPartyAdType.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Ads\ThirdPartyPlatform.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Ads\UnityVideoAd.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Ads\VideoCompelete.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Ads\VideoConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Ads\VideoEcpm.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Ads\VungleVideoAd.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\App.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Azure\AzureBlobStorage.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Azure\AzureTableStorage.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Debuggers\Debugger.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Extensions\AutomaticRotation.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Extensions\Breathe.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Extensions\DelayBehaviour.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Extensions\EmptyScript.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Extensions\Extensions.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Extensions\Jitter.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Extensions\LoopPath.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Extensions\LoopScrollbarExtension.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Extensions\NoDrawingRayCast.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Extensions\SelectableEffect.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Extensions\SelectableEffectType.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Extensions\SpriteExtension.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\HighLightUtilitys\HighLightMask.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\HighLightUtilitys\U2DHighLightUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\HighLightUtilitys\UIHighLightUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Inputs\EscapeButtonControler.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Inputs\EscapeInputManager.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Inputs\FindObjectsWithClick.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Inputs\PhysicalDragThreshold.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Inputs\PinchZoom.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Inputs\RaiseEventHandlerData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\JSONUtilitys\Json.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Localization\FontConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Localization\FontData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Localization\LocalizationFont.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Localization\LocalizationLabel.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Localization\LocalizationText.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Localization\LocalizationUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\MessageBoxs\MessageBox.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\MessageBoxs\MessageBoxU.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\MouseCursor\MouseCursorController.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Notifications\LocalNotification.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Point.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Rates\BaseRateScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Rates\FeatureRateScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Rates\FeedbackScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Rates\RateData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Rates\RateScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Rates\RateType.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\ScenesManager\BackgroundController.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\ScenesManager\BaseScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\ScenesManager\DelayEffect.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\ScenesManager\GlobalLoadingAnimation.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\ScenesManager\JoinEffect.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\ScenesManager\JoinEffectDir.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\ScenesManager\MySceneManager.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\ScenesManager\NavigationEffect.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\ScenesManager\NoJoinEffect.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\ScenesManager\PivotScaleEffect.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\ScenesManager\ScaleEffect.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\ScenesManager\SceneLoadEvent.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\ScenesManager\SceneState.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\ScenesManager\SceneStateEvent.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\ScreenOrientations\NightingaleOrientation.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\ScreenOrientations\ScreenOrientationEvent.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\ScreenOrientations\ScreenOrientationManager.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\SensitiveWords\SensitiveWords.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Socials\FacebookHighscoreResults.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Socials\FacebookMananger.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Socials\FacebookRequestData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Socials\FacebookRequestDataCache.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Socials\FacebookRequestEvent.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Socials\FacebookUser.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Socials\FacebookUserScore.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Socials\IBaseSocial.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Socials\SocialPlatform.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Socials\UnityFacebook.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\SortingLayerAttribute.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Tasks\ImageTask.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Tasks\LocalAssetTask.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Tasks\NormalTask.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Tasks\RemoteAssetTask.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Tasks\TaskCompleted.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Tasks\TaskHelper.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Tasks\TaskState.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Toasts\LoadingHelper.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Toasts\LoadingHelperEvent.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\U2D\DoubleSpriteButton.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\U2D\DoubleSpriteUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\U2D\NightingaleSprite.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\U2D\SpriteManager.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\U2D\SpriteOutline.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\UIExtensions\BaseImage.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\UIExtensions\CashText.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\UIExtensions\CircleImage.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\UIExtensions\CurvedText.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\UIExtensions\Gradient.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\UIExtensions\HighLightMask.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\UIExtensions\LabelButton.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\UIExtensions\LineCurve.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\UIExtensions\MyScrollRect.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\UIExtensions\ScrollClampControl.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\UIExtensions\SetPropertyUtilityExt.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\UIExtensions\SuffixText.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\UIExtensions\TabContent.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\UIExtensions\TabGroup.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\UIExtensions\TextVerticalGradientColor.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\UIExtensions\ToggleButton.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\AppActiveUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\AssetData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\AssetPath.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\AudioUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\CenterDir.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\CompressUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\EncryptionUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\EnumUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\FileAsynUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\FileUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\FPSUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\LoaderUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\MathUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\MultipleBehaviour`1.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\NightingaleConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\NightingaleSystemInfo.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\NightingaleTime.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\PathUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\PlatformUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\RectTransformHelper.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\SingletonBehaviour.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\SingletonClass`1 where T.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\SingletonData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\StepData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\StepUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\StreamingAssetsPathUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\SystemTime.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\TaskQueueOnByoneUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\TaskQueueUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\TimerUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\TimeSpanData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\Nightingale\Utilitys\TypeAttribute.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\NtgAndroidAgent.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\NtgNativeAgent.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\NtgNativePluginSample.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\PressBackEventHandler.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\PurchasingEevet.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\RaiseEventHandler.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\RawImageUV.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\RequestClubData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\RippleEffect.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\ScheduleData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SG\InitOnStart.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SG\Pool.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SG\PoolInflationType.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SG\PoolObject.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SG\ResourceManager.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\ShaderController.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\AAOConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\AchievementCompletedScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\AchievementConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\AchievementConfigs.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\AchievementData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\AchievementInfo.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\AchievementItemUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\AchievementScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\AchievementStyle.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\AchievementType.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ActiveViewUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\AppearNodeConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\AskHelpAchievementTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\AssetBundleCompletedEvenet.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\AssetBundleEvenet.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\AssetBundleHelper.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\AuxiliaryData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\AvaterType.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\AvaterUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BackgroundPoker.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BagBoosterScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BankButtonUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BankCoinsScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BankConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BankItemData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BaseAdditional.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BaseCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BaseExtra.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BaseSpine.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BaseWeekEventUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BatterEliminateBooster.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BatterExtra.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BatterSpine.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BatterSpineItem.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\Beetle.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BellaBlessingBooster.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BoatAnimationUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BombEliminateBooster.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BombExtra.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BombSpine.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BonusInfo.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BoosterCommodity.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BoosterCommodityChanged.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BoosterItemUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BoosterNumberUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BoosterSprite.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BoosterSpriteUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BoosterStoreItem.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BoosterType.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BoosterTypeConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BoosterUseEffectUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BurnRopeBooster.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ButtonClick.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ButtonLabel.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ButtonLightMask.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ButtonNumberUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ButtonType.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\BuyStepButtonUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\CanvasControl.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\CardAdditional.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\CardProbability.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\CardStep.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\CardType.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\CardTypeNodeConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ChapterConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ChapterData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\CharacterUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ChatButtonUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ChatItemUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ChatScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ChatUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\CheeseTacticsBooster.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClearanceExtra.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClearBombTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClearNumberUpDownTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClearRopeTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClearSankeTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClearSuitCardAchievementTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClickCardChangedEvent.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\CloudAnimtionUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubAvatarScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubBonusConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubBonusItemUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubBonusLevelConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubBonusViewUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubButtonUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubDetailUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubEvent.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubGroupEvent.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubItemUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubLeaderboardEvent.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubLeaderboardUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubLeaderboardView.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubMiniUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubOperation.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubPagesViewUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubPlayerData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubPlayerScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubPlayerUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubRoles.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubSearchViewUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubSkill.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubStoreConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubStoreItemConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubStoreItemUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubStoreScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubsUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubSuperTreasureUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubSystemData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ClubSystemHelper.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\CoinBankData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\CoinCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\CoinUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\CollectColorCardTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\CollectedInChapterAchievementTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\CollectNumberCardTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\CollectShapeCardTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ColorCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ColorEliminateBooster.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ColorExtra.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ColorMatchBooster.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\CommodityNumber.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\CommoditySource.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\CommonGuideUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\CommonPopScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\CompeletedChapterAchievementTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\CompeletedLevelAchievementTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ContagionEliminateBooster.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ContagionExtra.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ContagionSpine.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\CreatorClubScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\DailyBonusItemUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\DailyBonusScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\DailyConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\DailyConfigUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\DailyGroup.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\DailyInfo.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\DailyLevel.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\DailyReward.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\DailyRewardLevel.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\DailyRewardState.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\DailyTime.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\DailyTimeLevel.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\DayActivityConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\DayActivityHelper.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\DayActivityType.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\DayActivityUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\DebuffExtra.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\DelayActiveButton.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\DeviceFileData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\DevicePlayLevels.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\DoubleSeagullBooster.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\DowningProgressUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\DownloadProgress.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\Effect2DUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\EffectUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\EventChoiceUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\EventConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\EventItemConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ExchangeBoosterScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ExchangeConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ExpertGroupUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ExpertLevelConfigGroup.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ExpertLevelScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ExpertWorldConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ExtraType.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ExtraTypeNodeConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\FacebookFriendUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\FacebookLoginBonusScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ForkCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\FoxCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\FreeCoinScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\FriendAvaterUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\FriendsScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\FriendViewUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\FrontPoker.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\FullFlipBooster.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\GainExtra.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\GameConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\GetNewStarTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\GetStreakTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\GiftData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\GlobalBooster.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\GlobalBoosterUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\GlobalConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\GoldenCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\GroupButton.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\GrowBatterExtra.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\GuessGame.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\HandCardSystem.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\HandConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\HandGroup.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\HelpFriendAchievementTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\HelpScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\HightScoreRewardConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\HightScoreRewardGroup.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\IAchievementTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ImageUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\InboxMessageUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\InboxNewsUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\InboxNumberEvent.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\InboxScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\InboxUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\Insect.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\InsectKing.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\InviteFriendAchievementTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\InviteJoinClubScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\IPhoneXUIControl.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\IslandBackground.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\IsLandDetails.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\IslandScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\IsLandThumbnailController.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\IsLandThumUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\IStorageHandGroup.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\JackpotUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\JackpotUser.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\JackpotUserEvent.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\JackpotUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\JoinAchievementTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\JoinClubScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\JoinEffectCloseButton.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\JoinPlayHelper.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\KeyExtra.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LabelUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LeaderboardButtonUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LeaderBoardRewardItemUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LeaderboardRewardScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LeaderboardScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LeaderboardStateUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LeaderBoardTipScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LeaderboardUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LeaderBoardUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LeaderboarGuidePopup.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LeftHandGroup.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LeveEndScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LevelConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LevelControl.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LevelData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LevelLeaderBoardUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LevelRetrunCoinConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LevelScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LevelStarGroupUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LevelStarIslandData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LevelStarUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LinkImageConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LinkImageText.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LoadingGameScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LoadingScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LockEliminateBooster.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LockExtra.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LoginFacebookAchievementTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\LoopAnimtionUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\MakeAChoicePopup.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\MatchStep.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\MenuUIRight.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\MenuUITopLeft.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\MessageContent.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\MessageData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\MessageGroupEvent.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\MessageUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\MiniCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\MiniLeaderBoardEvent.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\MiniLeaderBoardUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\MultipleImageUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\MultipleStreaksBooster.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\MyClubResponseEvent.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\NewsConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\NormalBooster.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\NoticeDetailsPopup.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\NumberCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\NumberGrowEliminateBooster.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\NumberGrowExtra.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\NumberUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\NumberUpStorageHandGroup.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ObjectConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\OfflineCoinsUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\OldBoosterSaleUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\OldCoinSaleUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\OldRandomSaleUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\OldSaleUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\OldWildSaleUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\OnceBuyCoinsScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\OnceGameData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\OperatingHelper.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\OptimizationSystem.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\OverInvitePop.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\PackData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\PadControl.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\PayTableScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\PickOnceUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\PlayAchievementTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\PlayAdditional.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\PlayBooster.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\PlayBoosterGroup.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\PlayData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\PlayDesk.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\PlayLevel.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\PlayScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\PlayStreaksSystem.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\PlayTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\Poker.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\PokerData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\PokerSpine.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\PokerThemeConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\PokerThemeGroup.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\PokerThemeScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\PokerThemeUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\PrefabLabel.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ProgressBarUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ProtoDataUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\PurchasingCommodity.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\PurchasingData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\PurchasingInfo.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\PurchasingPackage.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\PurchasingPriceUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\PurchasSuccessItem.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\PurchasSuccessPopup.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\QuestAchievementTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\QuestBaseUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\QuestConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\QuestConfigGroup.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\QuestData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\QuestHelper.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\QuestInfo.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\QuestsScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\QuestStyle.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\QuestTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\QuestType.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\QuestUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\QuestUpcomingUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\RankCache.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\RankClub.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\RankCoinData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\RankEvent.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\RankGrow.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\RankLevelDataGroup.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\RankRewardData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\RankType.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\RankTypeEvent.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\RankUser.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\RecordDataType.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\RemainLabel.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\RemoteHelper.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ReportScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\RequestState.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\RewardBoosterNumberUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\RightHandGroup.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\RocketBooster.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\RocketCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\RopeExtra.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\RowDayAchievementTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SaleButtonUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SaleCommodity.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SaleConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SaleData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SaleGroupScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SaleInfo.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SaleItemConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SaleItemUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SalePackage.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SaleScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SaleStoreItem.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\Sample01Tutorial.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\Sample02Tutorial.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SampleCardTutorial.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ScarecrowCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SceneInternalAnimationUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ScoringSystem.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\Seagull.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SeagullCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SegmentType.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SelectAchievementItemUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SelectionIslandScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SelfAvaterUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SellPokerUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SellRocketCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ServerError.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SessionData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SessionGroup.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SettingData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SettingsScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ShellExchangeScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ShellExchangeUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SkeletonEliminateBooster.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SkeletonExtra.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SLotGameItemTransform.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SlotsLightUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SlotsMachine.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SnakeCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SnakeEliminateBooster.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SolitaireTripeaksApp.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SolitaireTripeaksData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SolitaireVariationExtensions.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SoundScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SoureNumber.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SpecialActivityButton.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SpecialActivityConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SpecialActivityData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SpecialActivityExchangeUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SpecialActivitySaleButtonUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SpecialActivitySaleScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SpecialActivityScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SpecialActivityUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\StageIconHelper.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\StarType.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\StatisticsData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\StepExtra.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\StorageHandGroup.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\StoreItemUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\StoreLevelConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\StoreOffSaleScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\StorePackageItem.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\StorePackageUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\StoreScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\StoreType.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\StreaksAchievementTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SuperTreasure.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SwallowedCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SwallowedExtra.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SynchronizeData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SynchronizeDownloadState.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SynchronizeGroupData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SynchronizeScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SynchronizeUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SynchronizeUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\SystemMessageData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\TextTipsUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\ThemeType.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\TimeExtra.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\TipEvent.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\TipPokerSystem.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\TipPopupDoubleButtonScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\TipPopupHasIconScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\TipPopupIconNumberScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\TipPopupNoIconScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\TipType.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\TitleIconLabelUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\TopCanvasHelper.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\TopPlayerEvent.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\TopPlayerUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\Totem.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\TreasureUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\TripeaksBonusScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\TripeaksLocalData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\TripeaksLogUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\TripeaksPlayer.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\TripeaksPlayerEvent.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\TripeaksPlayerHelper.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\TripeaksPlayerInView.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\UerAvater.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\UIViewGroup.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\UnityPurchasingConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\UnityPurchasingHelper.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\UniverseConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\UseBoosterAchievementTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\UseNumber.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\UseRocketAchievementTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\UseRocketTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\UseSnakeAchievementTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\UseWildAchievementTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\UseWildTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\VerificationUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\VersionConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\VineEliminateBooster.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\VineExtra.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\WatchVideoAdTipScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\WatchVideoFreeCoinsUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\WheelData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\WheelGamePopup.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\WheelRewardElement.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\WheelSprite.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\WildCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\WinAchievementTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\WinCoinsTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\WinGameInSceneTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\WinGameTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\WinInAchievementTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\WinRowTarget.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\WorldConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\WorldData.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\WorldHandConfig.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\WorldScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\SolitaireTripeaks\WorldThumbnailUI.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\TaskDoSomething.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\TaskQueue.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\TripeaksTools\DiffLoading.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\TripeaksTools\DiffUtility.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\TripeaksTools\DiffUtilityScene.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\TripeaksTools\TotemCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\TripeaksTools\TripeaksBatterCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\TripeaksTools\TripeaksBombCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\TripeaksTools\TripeaksCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\TripeaksTools\TripeaksContagionCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\TripeaksTools\TripeaksDesk.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\TripeaksTools\TripeaksForkCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\TripeaksTools\TripeaksHard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\TripeaksTools\TripeaksKeyCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\TripeaksTools\TripeaksLockCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\TripeaksTools\TripeaksMouseCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\TripeaksTools\TripeaksNumberGrowCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\TripeaksTools\TripeaksOnceReslut.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\TripeaksTools\TripeaksRopeCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\TripeaksTools\TripeaksSameColorCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\TripeaksTools\TripeaksScarecrowCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\TripeaksTools\TripeaksSeagullCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\TripeaksTools\TripeaksSkeletonCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\TripeaksTools\TripeaksTest.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\TripeaksTools\TripeaksVineCard.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\UnityEngine\UI\LoopHorizontalScrollRect.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\UnityEngine\UI\LoopScrollArraySource`1.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\UnityEngine\UI\LoopScrollDataSource.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\UnityEngine\UI\LoopScrollPrefabSource.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\UnityEngine\UI\LoopScrollRect.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\UnityEngine\UI\LoopScrollSendIndexSource.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\UnityEngine\UI\LoopVerticalScrollRect.cs" />
+    <Compile Include="Assets\SolitaireIsland\Scripts\UpdateLoopScrollbarItem.cs" />
+    <None Include="Assets\Common\F4A\F4ACore\Data\ConfigDefault\AdConfigDefault.txt" />
+    <None Include="Assets\Resources\localization\Localization_quest.txt" />
+    <None Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Runtime\Shaders\WallHackTexture.shader" />
+    <None Include="Assets\Images\animation\xintianwen_tex.txt" />
+    <None Include="Assets\Common\F4A\Demigiant\DOTweenPro\readme.txt" />
+    <None Include="Assets\Common\F4A\AndroidNativeFunctions\Readme.txt" />
+    <None Include="Assets\Images\animation\chameleon_tex.txt" />
+    <None Include="Assets\Resources\localization\Localization_Sale.txt" />
+    <None Include="Assets\Common\F4A\F4AAssetBundle\Readme\ChangeNotes.txt" />
+    <None Include="Assets\Common\F4A\F4ACore\Data\ConfigDefault\SMSConfigDefault.txt" />
+    <None Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Changelog.txt" />
+    <None Include="Assets\Common\F4A\MobileOptimize\Shader\OpaqueNoTint.shader" />
+    <None Include="Assets\Resources\localization\Localization_bonus.txt" />
+    <None Include="Assets\Resources\localization\Localization_Notification.txt" />
+    <None Include="Assets\Resources\localization\Localization_popup.txt" />
+    <None Include="Assets\Common\F4A\BitmapFontImporter\Examples\Font2\font2.fnt" />
+    <None Include="Assets\Images\animation\xintianwen_ske.txt" />
+    <None Include="Assets\Resources\localization\Localization_poker.txt" />
+    <None Include="Assets\Images\animation\Baoxianxiang_ske.txt" />
+    <None Include="Assets\Common\F4A\F4ACore\Data\ConfigDefault\WebViewDataTest.txt" />
+    <None Include="Assets\Common\F4A\F4ACore\Data\ConfigDefault\AndroidManifest_admob.xml" />
+    <None Include="Assets\Resources\StreamingAssets.txt" />
+    <None Include="Assets\Images\animation\chameleon_2_ske.txt" />
+    <None Include="Assets\Resources\localization\Localization_level_confirm.txt" />
+    <None Include="Assets\Resources\localization\Localization_SpecialActivity.txt" />
+    <None Include="Assets\Spine\version.txt" />
+    <None Include="Assets\Resources\localization\Localization_LeaderBoard.txt" />
+    <None Include="Assets\Common\F4A\BitmapFontImporter\Examples\Font1\font1.fnt" />
+    <None Include="Assets\Resources\DirtyWords.txt" />
+    <None Include="Assets\AndroidNativeFunctions\Readme.txt" />
+    <None Include="Assets\Images\animation\chameleon_2_tex.txt" />
+    <None Include="Assets\Resources\StreamingAssets 1.txt" />
+    <None Include="Assets\Common\F4A\NativeShare\README.txt" />
+    <None Include="Assets\Resources\localization\Localization_bank.txt" />
+    <None Include="Assets\Common\F4A\JsonDotNet\link.xml" />
+    <None Include="Assets\Resources\localization\Localization_free.txt" />
+    <None Include="Assets\Resources\localization\Localization_facebook.txt" />
+    <None Include="Assets\Common\F4A\F4ACore\Data\ConfigDefault\AssetBundleConfigDefault.txt" />
+    <None Include="Assets\Images\animation\chameleon_ske.txt" />
+    <None Include="Assets\Common\Data\SocialInfo.txt" />
+    <None Include="Assets\Resources\localization\Localization_gameend.txt" />
+    <None Include="Assets\Common\F4A\Demigiant\DOTween\readme.txt" />
+    <None Include="Assets\Images\animation\girl_ske.txt" />
+    <None Include="Assets\Resources\config\SensitiveWords.txt" />
+    <None Include="Assets\Resources\localization\Localization_achievement.txt" />
+    <None Include="Assets\Images\animation\Baoxianxiang_tex.txt" />
+    <None Include="Assets\Resources\localization\Localization_help.txt" />
+    <None Include="Assets\Resources\localization\Localization_Club.txt" />
+    <None Include="Assets\Images\animation\girl_tex.txt" />
+    <None Include="Assets\Images\animation\mouse_tex.txt" />
+    <None Include="Assets\Common\F4A\Demigiant\DemiLib\Core\DemiLib.xml" />
+    <None Include="Assets\Common\F4A\F4ACore\Data\ConfigDefault\F4AConfigDefault.txt" />
+    <None Include="Assets\Resources\localization\Localization_guide.txt" />
+    <None Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\Integration\readme.txt" />
+    <None Include="Assets\Resources\localization\Localization_inbox.txt" />
+    <None Include="Assets\Resources\localization\Localization_report.txt" />
+    <None Include="Assets\Resources\localization\Localization.txt" />
+    <None Include="Assets\Common\Data\BuildInfo.txt" />
+    <None Include="Assets\Resources\localization\Localization_mini_game.txt" />
+    <None Include="Assets\Common\F4A\CodeStage\AntiCheatToolkit\API.txt" />
+    <None Include="Assets\Common\Data\IAPInfo.txt" />
+    <None Include="Assets\Common\F4A\Readme\ChangeNotes.txt" />
+    <None Include="Assets\Common\F4A\F4AMobileThird\Readme\ChangeNotes.txt" />
+    <None Include="Assets\Common\F4A\Demigiant\readme_DOTweenPro.txt" />
+    <None Include="Assets\Images\animation\mouse_ske.txt" />
+    <None Include="Assets\Common\Data\AdsInfo.txt" />
+    <None Include="Assets\Common\F4A\F4ACore\Data\ConfigDefault\ConfigWebViewAds.txt" />
+    <None Include="Assets\Resources\localization\Nightingale.txt" />
+    <None Include="Assets\Common\F4A\F4ACore\ChangeNotes.txt" />
+    <None Include="Assets\Resources\localization\Localization_setting.txt" />
+    <None Include="Assets\Common\F4A\PoolManager\PathologicalGames\readme.txt" />
+    <Reference Include="Unity.Timeline.Editor">
+      <HintPath>/Users/apple/Desktop/MyData/work/Kanik Noida/Solitaire Adv Tripeaks/SolitaireAdvTripeaks/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VSCode.Editor">
+      <HintPath>/Users/apple/Desktop/MyData/work/Kanik Noida/Solitaire Adv Tripeaks/SolitaireAdvTripeaks/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>/Users/apple/Desktop/MyData/work/Kanik Noida/Solitaire Adv Tripeaks/SolitaireAdvTripeaks/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>/Users/apple/Desktop/MyData/work/Kanik Noida/Solitaire Adv Tripeaks/SolitaireAdvTripeaks/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>/Users/apple/Desktop/MyData/work/Kanik Noida/Solitaire Adv Tripeaks/SolitaireAdvTripeaks/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.CollabProxy.Editor">
+      <HintPath>/Users/apple/Desktop/MyData/work/Kanik Noida/Solitaire Adv Tripeaks/SolitaireAdvTripeaks/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Rider.Editor">
+      <HintPath>/Users/apple/Desktop/MyData/work/Kanik Noida/Solitaire Adv Tripeaks/SolitaireAdvTripeaks/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>/Users/apple/Desktop/MyData/work/Kanik Noida/Solitaire Adv Tripeaks/SolitaireAdvTripeaks/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>/Users/apple/Desktop/MyData/work/Kanik Noida/Solitaire Adv Tripeaks/SolitaireAdvTripeaks/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AndroidJNIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.DSPGraphModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.FileSystemHttpModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.FileSystemHttpModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.HotReloadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ProfilerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SubstanceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TextCoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityTestProtocolModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="TriPeaks.ProtoData.Client.Serializer">
+      <HintPath>/Users/apple/Desktop/MyData/work/Kanik Noida/Solitaire Adv Tripeaks/SolitaireAdvTripeaks/Assets/Plugins/TriPeaks.ProtoData.Client.Serializer.dll</HintPath>
+    </Reference>
+    <Reference Include="TriPeaks.ProtoData.Client">
+      <HintPath>/Users/apple/Desktop/MyData/work/Kanik Noida/Solitaire Adv Tripeaks/SolitaireAdvTripeaks/Assets/Plugins/TriPeaks.ProtoData.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>/Users/apple/Desktop/MyData/work/Kanik Noida/Solitaire Adv Tripeaks/SolitaireAdvTripeaks/Assets/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>/Users/apple/Desktop/MyData/work/Kanik Noida/Solitaire Adv Tripeaks/SolitaireAdvTripeaks/Assets/Plugins/protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="ZKWCryptoPlayerPrefs">
+      <HintPath>/Users/apple/Desktop/MyData/work/Kanik Noida/Solitaire Adv Tripeaks/SolitaireAdvTripeaks/Assets/Common/F4A/ZeichenKraftwerk/ZKWCryptoPlayerPrefs.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>/Users/apple/Desktop/MyData/work/Kanik Noida/Solitaire Adv Tripeaks/SolitaireAdvTripeaks/Assets/Common/F4A/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenPro">
+      <HintPath>/Users/apple/Desktop/MyData/work/Kanik Noida/Solitaire Adv Tripeaks/SolitaireAdvTripeaks/Assets/Common/F4A/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
+    </Reference>
+    <Reference Include="DemiLib">
+      <HintPath>/Users/apple/Desktop/MyData/work/Kanik Noida/Solitaire Adv Tripeaks/SolitaireAdvTripeaks/Assets/Common/F4A/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>/Users/apple/Desktop/MyData/work/Kanik Noida/Solitaire Adv Tripeaks/SolitaireAdvTripeaks/Assets/Common/F4A/Demigiant/DOTween/DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>/Users/apple/Desktop/MyData/work/Kanik Noida/Solitaire Adv Tripeaks/SolitaireAdvTripeaks/Library/PackageCache/com.unity.purchasing@2.0.6/UnityEngine.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/System.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/System.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/System.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Microsoft.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/Microsoft.Win32.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.AppContext">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.AppContext.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Concurrent">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.Concurrent.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.NonGeneric">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.NonGeneric.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Specialized">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.Specialized.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.EventBasedAsync">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.EventBasedAsync.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Primitives">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.TypeConverter">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.TypeConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Console">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Common">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Data.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Contracts">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Debug">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Debug.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.FileVersionInfo">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.FileVersionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Process">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Process.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.StackTrace">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.StackTrace.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.TextWriterTraceListener">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.TextWriterTraceListener.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tools">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.TraceSource">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.TraceSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Primitives">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Drawing.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Dynamic.Runtime">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Dynamic.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.Calendars.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization.Extensions">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.ZipFile">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.Compression.ZipFile.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.DriveInfo">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.DriveInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Watcher">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.Watcher.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.IsolatedStorage">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.IsolatedStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.MemoryMappedFiles">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.MemoryMappedFiles.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipes">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.Pipes.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.UnmanagedMemoryStream">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.UnmanagedMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Expressions">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Expressions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Parallel">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Parallel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Queryable">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Queryable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Rtc">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Http.Rtc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.NameResolution">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.NameResolution.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.NetworkInformation">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.NetworkInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Ping">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Ping.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Primitives">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Requests">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Requests.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Security">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Sockets">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Sockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebHeaderCollection">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebHeaderCollection.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebSockets.Client">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebSockets.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebSockets">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebSockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ObjectModel">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.ILGeneration">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.ILGeneration.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.Lightweight">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.Lightweight.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Emit">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Extensions">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Primitives">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Resources.Reader">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.Reader.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Resources.ResourceManager">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.ResourceManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Resources.Writer">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.Writer.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.VisualC">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.CompilerServices.VisualC.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Handles">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Handles.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Numerics">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Formatters.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Json">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Primitives">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Xml">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Claims">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Claims.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Csp">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Csp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Principal.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.SecureString">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.SecureString.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Duplex">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Duplex.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Http">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.NetTcp">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.NetTcp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Primitives">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Security">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.Extensions">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.Encoding.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.RegularExpressions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Overlapped">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Overlapped.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Parallel">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Tasks.Parallel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Thread">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Thread.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.ThreadPool">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.ThreadPool.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Timer">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Timer.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.ReaderWriter">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.ReaderWriter.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XDocument">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XPath.XDocument">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XPath">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XmlDocument">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XmlDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XmlSerializer">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XmlSerializer.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityScript">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityscript/UnityScript.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityScript.Lang">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityscript/UnityScript.Lang.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang">
+      <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{FDA21ED4-085F-9399-F8BE-881E6204F057}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity.csproj">
+      <Project>{8B5A33C0-DB14-6CD5-5ABB-DB78743AAFC8}</Project>
+      <Name>spine-unity</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity-editor.csproj">
+      <Project>{33104444-BF92-0A4C-11FE-D51A02563112}</Project>
+      <Name>spine-unity-editor</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
