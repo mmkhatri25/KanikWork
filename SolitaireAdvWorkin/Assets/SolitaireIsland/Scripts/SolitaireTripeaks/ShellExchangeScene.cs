@@ -25,7 +25,7 @@ namespace SolitaireTripeaks
 			BuyShellsButton.onClick.AddListener(delegate
 			{
 				base.IsStay = false;
-				StoreScene.ShowStore();
+			//	StoreScene.ShowStore();
 				Object.FindObjectOfType<StoreScene>().HasVaule(delegate(StoreScene storeScene)
 				{
 					storeScene.transform.FindType("Canvas/Parent/Store", delegate(TabGroup group)

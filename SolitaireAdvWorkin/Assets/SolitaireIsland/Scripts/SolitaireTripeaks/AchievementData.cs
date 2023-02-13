@@ -50,10 +50,10 @@ namespace SolitaireTripeaks
 					PutAchievement(AchievementType.CompeletedLevel, achievementData.GetConfig().scheduleData);
 				}
 			}
-			if (SingletonBehaviour<FacebookMananger>.Get().IsLogin())
-			{
-				DoAchievement(AchievementType.LoginFacebook);
-			}
+			//if (SingletonBehaviour<FacebookMananger>.Get().IsLogin())
+			//{
+			//	DoAchievement(AchievementType.LoginFacebook);
+			//}
 		}
 
 		public void CalcAchievement(int world, int chapter)

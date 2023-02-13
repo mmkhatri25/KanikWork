@@ -40,6 +40,8 @@ namespace SolitaireTripeaks
 		{
 			_selectGameObject.transform.SetParent(achievementItemUI.transform, worldPositionStays: false);
 			_selectGameObject.transform.SetAsLastSibling();
+           // DebugConsole.Log("data is here..."+ data, "Green");
+            
 			_AchievementInfo = data;
 			AchievementProgressGameObject.SetActive(value: false);
 			SelectButton.gameObject.SetActive(value: false);

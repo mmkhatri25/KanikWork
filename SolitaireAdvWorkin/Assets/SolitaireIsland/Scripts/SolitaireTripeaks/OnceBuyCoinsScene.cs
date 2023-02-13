@@ -42,7 +42,7 @@ namespace SolitaireTripeaks
 			CloseButton.onClick.AddListener(delegate
 			{
 				SingletonClass<MySceneManager>.Get().Close(new JoinEffect());
-				StoreScene.ShowStore();
+				//StoreScene.ShowStore();
 			});
 		}
 

@@ -15,6 +15,7 @@ namespace SolitaireTripeaks
 
 		public void SetAchievementData(AchievementInfo data, UnityAction<AchievementItemUI, AchievementInfo> selectUnityAction)
 		{
+        
 			ProgressTransform.gameObject.SetActive(value: false);
 			Button component = GetComponent<Button>();
 			component.onClick.AddListener(delegate
@@ -22,6 +23,8 @@ namespace SolitaireTripeaks
 				if (selectUnityAction != null)
 				{
 					selectUnityAction(this, data);
+          //  Debug.Log("data is here..."+ data.GetTitle());
+                    
 				}
 			});
 			if (data != null)

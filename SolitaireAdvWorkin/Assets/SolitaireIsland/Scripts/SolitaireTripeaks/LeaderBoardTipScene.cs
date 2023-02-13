@@ -24,10 +24,10 @@ namespace SolitaireTripeaks
 			Text maxRewardLabel = MaxRewardLabel;
 			Vector2 coins = SingletonBehaviour<LeaderBoardUtility>.Get().GetCoins((int)RankCoinData.Get().Staged);
 			maxRewardLabel.text = coins.y.ToString();
-			StageButton.onClick.AddListener(delegate
-			{
-				SingletonClass<MySceneManager>.Get().Popup<LeaderboarGuidePopup>("Scenes/Pops/LeaderboarGuidePopup").OnStart(isClan: false, RankCoinData.Get().Staged, SingletonBehaviour<LeaderBoardUtility>.Get().GetRewards());
-			});
+			//StageButton.onClick.AddListener(delegate
+			//{
+			//	SingletonClass<MySceneManager>.Get().Popup<LeaderboarGuidePopup>("Scenes/Pops/LeaderboarGuidePopup").OnStart(isClan: false, RankCoinData.Get().Staged, SingletonBehaviour<LeaderBoardUtility>.Get().GetRewards());
+			//});
 		}
 	}
 }

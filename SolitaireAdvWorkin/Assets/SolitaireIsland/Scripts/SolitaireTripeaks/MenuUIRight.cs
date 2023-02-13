@@ -100,7 +100,7 @@ namespace SolitaireTripeaks
 			ClubButton.gameObject.SetActive(SingletonBehaviour<ClubSystemHelper>.Get().IsActive());
 			ClubButton.onClick.AddListener(delegate
 			{
-				SingletonBehaviour<ClubSystemHelper>.Get().ShowClubScene();
+				//SingletonBehaviour<ClubSystemHelper>.Get().ShowClubScene();
 			});
 			SingletonBehaviour<GlobalConfig>.Get().CreateNumber(PokerThemeButton.gameObject, 1f, PokerThemeGroup.Get().UseableCount());
 			PokerThemeButton.onClick.AddListener(delegate

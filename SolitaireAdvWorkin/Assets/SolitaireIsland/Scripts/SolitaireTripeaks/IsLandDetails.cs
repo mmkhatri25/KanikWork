@@ -244,45 +244,45 @@ namespace SolitaireTripeaks
 					}
 					else
 					{
-						if (!AuxiliaryData.Get().LeaderBoardOpen && SingletonBehaviour<LeaderBoardUtility>.Get().IsOepn)
-						{
-							LeaderboardButtonUI leaderboardButtonUI = UnityEngine.Object.FindObjectOfType<LeaderboardButtonUI>();
-							if (leaderboardButtonUI != null)
-							{
-								AuxiliaryData.Get().LeaderBoardOpen = true;
-								JoinPlayHelper.CreateButtonTips(leaderboardButtonUI.Button, JoinEffectDir.Top, LocalizationUtility.Get("Localization_help.json").GetString("LeaderBoard_Desc"), delegate
-								{
-									Func<bool> FinderLeaderBoard = delegate
-									{
-										LeaderboardScene leaderboardScene = UnityEngine.Object.FindObjectOfType<LeaderboardScene>();
-										if (leaderboardScene != null)
-										{
-											leaderboardScene.AddClosedListener(delegate
-											{
-												JumpTo(schedule, delay);
-											});
-											return true;
-										}
-										return false;
-									};
-									if (!FinderLeaderBoard())
-									{
-										LoadingHelper loadingHelper = UnityEngine.Object.FindObjectOfType<LoadingHelper>();
-										if (loadingHelper != null && "LeaderboardRewardsScene".Equals(loadingHelper.LoadingPath))
-										{
-											loadingHelper.AddCloseListener(delegate
-											{
-												if (!FinderLeaderBoard())
-												{
-													JumpTo(schedule, delay);
-												}
-											});
-										}
-									}
-								});
-								return;
-							}
-						}
+						//if (!AuxiliaryData.Get().LeaderBoardOpen && SingletonBehaviour<LeaderBoardUtility>.Get().IsOepn)
+						//{
+						//	LeaderboardButtonUI leaderboardButtonUI = UnityEngine.Object.FindObjectOfType<LeaderboardButtonUI>();
+						//	if (leaderboardButtonUI != null)
+						//	{
+						//		AuxiliaryData.Get().LeaderBoardOpen = true;
+						//		JoinPlayHelper.CreateButtonTips(leaderboardButtonUI.Button, JoinEffectDir.Top, LocalizationUtility.Get("Localization_help.json").GetString("LeaderBoard_Desc"), delegate
+						//		{
+						//			Func<bool> FinderLeaderBoard = delegate
+						//			{
+						//				LeaderboardScene leaderboardScene = UnityEngine.Object.FindObjectOfType<LeaderboardScene>();
+						//				if (leaderboardScene != null)
+						//				{
+						//					leaderboardScene.AddClosedListener(delegate
+						//					{
+						//						JumpTo(schedule, delay);
+						//					});
+						//					return true;
+						//				}
+						//				return false;
+						//			};
+						//			if (!FinderLeaderBoard())
+						//			{
+						//				LoadingHelper loadingHelper = UnityEngine.Object.FindObjectOfType<LoadingHelper>();
+						//				if (loadingHelper != null && "LeaderboardRewardsScene".Equals(loadingHelper.LoadingPath))
+						//				{
+						//					loadingHelper.AddCloseListener(delegate
+						//					{
+						//						if (!FinderLeaderBoard())
+						//						{
+						//							JumpTo(schedule, delay);
+						//						}
+						//					});
+						//				}
+						//			}
+						//		});
+						//		return;
+						//	}
+						//}
 						if (AuxiliaryData.Get().IsTreasure(schedule))
 						{
 							AuxiliaryData.Get().CollectTreasure(schedule);

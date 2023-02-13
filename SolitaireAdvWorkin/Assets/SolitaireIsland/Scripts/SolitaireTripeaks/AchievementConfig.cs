@@ -45,6 +45,7 @@ namespace SolitaireTripeaks
 
 		public bool IsSocial()
 		{
+            return false;
 			if (achievementType == AchievementType.LoginFacebook || achievementType == AchievementType.AskHelp || achievementType == AchievementType.HelpFriend || achievementType == AchievementType.InviteFriend)
 			{
 				return true;

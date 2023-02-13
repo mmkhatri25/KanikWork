@@ -86,10 +86,10 @@ namespace SolitaireTripeaks
 			SingletonClass<MySceneManager>.Get().Popup<TipPopupNoIconScene>("Scenes/Pops/TipPopupNoIcon").OnStart(localizationUtility.GetString("title_out_of_coins"), localizationUtility.GetString("desc_out_of_coins"), localizationUtility.GetString("btn_ok"), delegate
 			{
 				SingletonClass<MySceneManager>.Get().Close(new JoinEffect(JoinEffectDir.Bottom));
-				if (!OnceBuyCoinsScene.TryShow())
-				{
-					ShowStore().SetUnityClose(unityAction);
-				}
+				//if (!OnceBuyCoinsScene.TryShow())
+				//{
+				//	ShowStore().SetUnityClose(unityAction);
+				//}
 			});
 		}
 	}

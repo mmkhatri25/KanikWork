@@ -71,18 +71,31 @@ namespace SolitaireTripeaks
 				select e).ToList();
 			foreach (AchievementInfo achievementData in achievementDatas)
 			{
+              //  print("tiutle--- " +achievementData.GetTitle());
+               
 				AchievementConfig config = achievementData.GetConfig();
-				if ((config.achievementType != AchievementType.CompeletedChapter && config.achievementType != AchievementType.CollectedAllStarsInChapter) || UniverseConfig.Get().GetChapterConfig(config.scheduleData.world, config.scheduleData.chapter) != null)
-				{
-					AchievementItemUI component = Object.Instantiate(asset).GetComponent<AchievementItemUI>();
-					component.SetAchievementData(achievementData, selectAchievementItemUI.SetSelectAchievementInfo);
-					component.transform.SetParent(ContentTransform, worldPositionStays: false);
-					if (flag)
-					{
-						selectAchievementItemUI.SetSelectAchievementInfo(component, achievementData);
-						flag = false;
-					}
-				}
+               
+                if ((config.achievementType != AchievementType.CompeletedChapter && config.achievementType != AchievementType.CollectedAllStarsInChapter) || UniverseConfig.Get().GetChapterConfig(config.scheduleData.world, config.scheduleData.chapter) != null)
+                {
+                    if (achievementData.GetTitle() == "Social Master" || achievementData.GetTitle() == "Socialer")
+                    {
+                        print("tiutle--- " + achievementData.GetTitle());
+                       // return;
+                    }
+                    else
+                    {
+                        print("tiutle--- " + achievementData.GetTitle());
+                    
+                        AchievementItemUI component = Object.Instantiate(asset).GetComponent<AchievementItemUI>();
+                        component.SetAchievementData(achievementData, selectAchievementItemUI.SetSelectAchievementInfo);
+                        component.transform.SetParent(ContentTransform, worldPositionStays: false);
+                        if (flag)
+                        {
+                            selectAchievementItemUI.SetSelectAchievementInfo(component, achievementData);
+                            flag = false;
+                        }
+                    }
+                }
 			}
 		}
 

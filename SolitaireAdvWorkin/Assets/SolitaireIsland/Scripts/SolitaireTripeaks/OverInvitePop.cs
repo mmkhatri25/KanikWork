@@ -98,7 +98,7 @@ namespace SolitaireTripeaks
 		{
 			if (number > 0)
 			{
-				AchievementData.Get().DoAchievement(AchievementType.InviteFriend);
+				//AchievementData.Get().DoAchievement(AchievementType.InviteFriend);
 				AuxiliaryData.Get().PutRequestInvitableFriends(new List<string>
 				{
 					id

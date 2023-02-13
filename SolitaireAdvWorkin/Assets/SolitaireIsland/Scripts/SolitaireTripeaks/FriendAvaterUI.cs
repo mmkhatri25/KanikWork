@@ -49,21 +49,21 @@ namespace SolitaireTripeaks
 				}
 				switch (avater)
 				{
-				case AvaterType.Social:
-					if (AvatarFrameImage == null)
-					{
-						GameObject gameObject = new GameObject("FrameImage");
-						gameObject.transform.SetParent(AvaterImage.transform, worldPositionStays: false);
-						AvatarFrameImage = gameObject.AddComponent<Image>();
-						AvatarFrameImage.rectTransform.sizeDelta = AvaterImage.rectTransform.sizeDelta * 1.08f;
-					}
-					AvatarFrameImage.sprite = AvatarFrameSprite;
-					AvatarFrameImage.gameObject.SetActive(value: true);
-					if (buttonLightMask != null)
-					{
-						buttonLightMask.SetActive(active: false);
-					}
-					break;
+				//case AvaterType.Social:
+					//if (AvatarFrameImage == null)
+					//{
+					//	GameObject gameObject = new GameObject("FrameImage");
+					//	gameObject.transform.SetParent(AvaterImage.transform, worldPositionStays: false);
+					//	AvatarFrameImage = gameObject.AddComponent<Image>();
+					//	AvatarFrameImage.rectTransform.sizeDelta = AvaterImage.rectTransform.sizeDelta * 1.08f;
+					//}
+					//AvatarFrameImage.sprite = AvatarFrameSprite;
+					//AvatarFrameImage.gameObject.SetActive(value: true);
+					//if (buttonLightMask != null)
+					//{
+					//	buttonLightMask.SetActive(active: false);
+					//}
+					//break;
 				case AvaterType.Master:
 					if (MasterBig)
 					{

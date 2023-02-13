@@ -90,7 +90,7 @@ namespace SolitaireTripeaks
 
 		public void OnClickInfo()
 		{
-			SingletonClass<MySceneManager>.Get().Popup<LeaderboarGuidePopup>("Scenes/ClubLeaderboarGuidePopup").OnStart(isClan: true, SingletonBehaviour<ClubSystemHelper>.Get().Segment, SingletonBehaviour<ClubSystemHelper>.Get().Rewards);
+			//SingletonClass<MySceneManager>.Get().Popup<LeaderboarGuidePopup>("Scenes/ClubLeaderboarGuidePopup").OnStart(isClan: true, SingletonBehaviour<ClubSystemHelper>.Get().Segment, SingletonBehaviour<ClubSystemHelper>.Get().Rewards);
 		}
 
 		public void OnStart(Club club)

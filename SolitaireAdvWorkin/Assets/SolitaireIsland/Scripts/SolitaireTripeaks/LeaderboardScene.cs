@@ -285,7 +285,7 @@ namespace SolitaireTripeaks
 
 		public void OnClickInfo()
 		{
-			SingletonClass<MySceneManager>.Get().Popup<LeaderboarGuidePopup>("Scenes/Pops/LeaderboarGuidePopup").OnStart(isClan: false, RankCoinData.Get().Staged, SingletonBehaviour<LeaderBoardUtility>.Get().GetRewards());
+			//SingletonClass<MySceneManager>.Get().Popup<LeaderboarGuidePopup>("Scenes/Pops/LeaderboarGuidePopup").OnStart(isClan: false, RankCoinData.Get().Staged, SingletonBehaviour<LeaderBoardUtility>.Get().GetRewards());
 		}
 	}
 }

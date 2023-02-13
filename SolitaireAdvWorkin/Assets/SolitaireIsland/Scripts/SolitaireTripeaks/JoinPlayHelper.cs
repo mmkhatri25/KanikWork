@@ -368,16 +368,16 @@ namespace SolitaireTripeaks
 
 		public static bool LeaderBoardTips()
 		{
-			if (SingletonBehaviour<LeaderBoardUtility>.Get().IsUploadEnable && !RankCoinData.Get().IsTips)
-			{
-				RankCoinData.Get().IsTips = true;
-				SingletonClass<MySceneManager>.Get().Popup<LeaderboarGuidePopup>("Scenes/Pops/LeaderboarGuidePopup").OnStart(isClan: false, RankCoinData.Get().Staged, SingletonBehaviour<LeaderBoardUtility>.Get().GetRewards())
-					.AddClosedListener(delegate
-					{
-						LeaderboardButtonUI.TryShowLeaderboard();
-					});
-				return true;
-			}
+			//if (SingletonBehaviour<LeaderBoardUtility>.Get().IsUploadEnable && !RankCoinData.Get().IsTips)
+			//{
+			//	RankCoinData.Get().IsTips = true;
+			//	SingletonClass<MySceneManager>.Get().Popup<LeaderboarGuidePopup>("Scenes/Pops/LeaderboarGuidePopup").OnStart(isClan: false, RankCoinData.Get().Staged, SingletonBehaviour<LeaderBoardUtility>.Get().GetRewards())
+			//		.AddClosedListener(delegate
+			//		{
+			//			LeaderboardButtonUI.TryShowLeaderboard();
+			//		});
+			//	return true;
+			//}
 			return false;
 		}
 
@@ -488,6 +488,7 @@ namespace SolitaireTripeaks
 
 		public static bool LeaderBoardInfo(UnityAction unityAction = null)
 		{
+            return false;
 			if (AuxiliaryData.Get().IsDailyActive("DailyLeaderBoardMini") && SingletonBehaviour<LeaderBoardUtility>.Get().GetRankType() == RankType.Upload && SingletonBehaviour<LeaderBoardUtility>.Get().RewardRequest == RequestState.Success && SingletonData<RankCache>.Get().Rank > 0 && SingletonData<RankCache>.Get().RankId.Equals(RankCoinData.Get().NewRankId))
 			{
 				AuxiliaryData.Get().PutDailyCompleted("DailyLeaderBoardMini");

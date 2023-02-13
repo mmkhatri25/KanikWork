@@ -73,10 +73,10 @@ namespace SolitaireTripeaks
 					RankCoinData.Get().Staged = rewards[0].NextStage;
 					SingletonClass<MySceneManager>.Get().Popup<LeaderboardRewardScene>("Scenes/LeaderboardRewardScene", new NavigationEffect()).OnStart(isClan: false, rewards[0], LeaderboardRewards);
 				}
-				else if (IsConnect())
-				{
-					SingletonClass<MySceneManager>.Get().Popup<LeaderboardScene>("Scenes/LeaderboardScene", new JoinEffect());
-				}
+				//else if (IsConnect())
+				//{
+				//	SingletonClass<MySceneManager>.Get().Popup<LeaderboardScene>("Scenes/LeaderboardScene", new JoinEffect());
+				//}
 				else
 				{
 					if (SingletonBehaviour<LeaderBoardUtility>.Get().RewardRequest == RequestState.Fail)

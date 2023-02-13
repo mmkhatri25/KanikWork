@@ -13,38 +13,39 @@ namespace SolitaireTripeaks
 
 		public LeaderboarGuidePopup OnStart(bool isClan, SegmentType segment, List<RewardItem> rewards)
 		{
-			GameObject asset = SingletonBehaviour<LoaderUtility>.Get().GetAsset<GameObject>(typeof(LeaderboarGuidePopup).Name, "UI/LeaderBoardRewardItemUI");
-			GameObject selected = null;
-			IEnumerator enumerator = Enum.GetValues(typeof(SegmentType)).GetEnumerator();
-			try
-			{
-				while (enumerator.MoveNext())
-				{
-					SegmentType segmentType = (SegmentType)enumerator.Current;
-					LeaderBoardRewardItemUI component = UnityEngine.Object.Instantiate(asset).GetComponent<LeaderBoardRewardItemUI>();
-					component.transform.SetParent(contentTransform, worldPositionStays: false);
-					component.SetInfo(isClan, (int)segmentType, (int)segment, rewards);
-					if (segmentType == segment)
-					{
-						selected = component.transform.gameObject;
-					}
-				}
-			}
-			finally
-			{
-				IDisposable disposable;
-				if ((disposable = (enumerator as IDisposable)) != null)
-				{
-					disposable.Dispose();
-				}
-			}
-			DelayDo(delegate
-			{
-				if (selected != null)
-				{
-					CenterToSelected(selected);
-				}
-			});
+        
+			//GameObject asset = SingletonBehaviour<LoaderUtility>.Get().GetAsset<GameObject>(typeof(LeaderboarGuidePopup).Name, "UI/LeaderBoardRewardItemUI");
+			//GameObject selected = null;
+			//IEnumerator enumerator = Enum.GetValues(typeof(SegmentType)).GetEnumerator();
+			//try
+			//{
+			//	while (enumerator.MoveNext())
+			//	{
+			//		SegmentType segmentType = (SegmentType)enumerator.Current;
+			//		LeaderBoardRewardItemUI component = UnityEngine.Object.Instantiate(asset).GetComponent<LeaderBoardRewardItemUI>();
+			//		component.transform.SetParent(contentTransform, worldPositionStays: false);
+			//		component.SetInfo(isClan, (int)segmentType, (int)segment, rewards);
+			//		if (segmentType == segment)
+			//		{
+			//			selected = component.transform.gameObject;
+			//		}
+			//	}
+			//}
+			//finally
+			//{
+			//	IDisposable disposable;
+			//	if ((disposable = (enumerator as IDisposable)) != null)
+			//	{
+			//		disposable.Dispose();
+			//	}
+			//}
+			//DelayDo(delegate
+			//{
+			//	if (selected != null)
+			//	{
+			//		CenterToSelected(selected);
+			//	}
+			//});
 			return this;
 		}
 

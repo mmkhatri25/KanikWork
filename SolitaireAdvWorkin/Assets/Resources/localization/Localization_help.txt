@@ -1,7 +1,7 @@
 [
     {
         "key": "help_first_tap",
-        "English": "Welcome! Now, you have a <color=#FFC300FF>'6'</color>. Tap cards on the desk that are 1 above or 1 below your <color=#FFC300FF>'6'</color> Card to collect them!",
+        "English": "Welcome! Now, you have a <color=#FFC300FF>'6'</color>. Tap cards on the Deck that are 1 above or 1 below your <color=#FFC300FF>'6'</color> Card to collect them!",
         "German": "Willkommen! Du hast ein '6'. Tippe auf Karten auf dem Tisch, die 1 über oder 1 unter deiner '6'-Karte sind, um sie einzusammeln.",
         "Spanish": "Bienvenido, tienes una '6'. Toca las cartas de la baraja que son superiores o inferiores en 1 a tu carta '6' para reunirlas.",
         "French": "Bienvenue, vous avez un 6. Touchez les cartes immédiatement supérieures ou inférieures à votre 6 pour les collectionner"
@@ -15,14 +15,14 @@
     },
     {
         "key": "help_tap_stock",
-        "English": "Tap your Deck to get new cards if none can be collected from the desk.",
+        "English": "Tap your Deck to get new cards if none can be collected from the Deck.",
         "German": "Tippe auf dein Deck, um neue Karten zu erhalten, \nwenn sich auf dem Tisch keine einsammeln lässt.",
         "Spanish": "Toca la baraja para obtener cartas nuevas si no puedes robar ninguna de la baraja.",
         "French": "Touchez votre deck s'il n'y a plus aucune carte à collectionner sur le plateau."
     },
     {
         "key": "help_got_it",
-        "English": "You got it! Now try to collect all cards on the desk!\nGood Luck! See you later.",
+        "English": "You got it! Now try to collect all cards on the Deck!\nGood Luck! See you later.",
         "German": "Du hast es verstanden! Sammle alle Karten auf dem Tisch ein.\nViel Glück, bis später!",
         "Spanish": "Lo has entendido. Ahora intenta reunir todas las cartas de la baraja.\nBuena suerte. Nos vemos.",
         "French": "Vous avez compris. Maintenant, essayez de collectionner toutes les cartes \nsur le plateau.Bonne chance et à bientôt !"

@@ -19,7 +19,7 @@ namespace SolitaireTripeaks
 			Btn_SaveNow.onClick.AddListener(delegate
 			{
 				SingletonClass<MySceneManager>.Get().Close(new JoinEffect());
-				StoreScene.ShowStore();
+			//	StoreScene.ShowStore();
 			});
 			RectTransform rectTransform = base.transform.Find("Canvas").Find("Parent") as RectTransform;
 			Button component = rectTransform.Find("CloseButton").GetComponent<Button>();

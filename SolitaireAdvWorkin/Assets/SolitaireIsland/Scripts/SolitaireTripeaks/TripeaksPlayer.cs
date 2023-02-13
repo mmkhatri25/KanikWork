@@ -117,28 +117,28 @@ namespace SolitaireTripeaks
 			{
 				AvatarInvoke(SingletonClass<AvaterUtility>.Get().GetAvater(avatar), SingletonClass<AvaterUtility>.Get().GetAvaterType(avatar));
 			}
-			else if (!string.IsNullOrEmpty(facebookId))
-			{
-				if (sprite != null)
-				{
-					AvatarInvoke(sprite, AvaterType.Social);
-					return;
-				}
-				AvatarInvoke(SingletonClass<AvaterUtility>.Get().GetAvater(), AvaterType.Normal);
-				if (string.IsNullOrEmpty(picture))
-				{
-					picture = string.Format("https://graph.facebook.com/{0}/picture?access_token={1}&width={2}&height={2}", facebookId, SingletonBehaviour<FacebookMananger>.Get().TokenString, 80);
-				}
-				TaskHelper.GetMiniDownload().AppendTask(new ImageTask(picture, facebookId)).RemoveAllListeners()
-					.AddListener(delegate(object asset, float p)
-					{
-						if (asset != null)
-						{
-							sprite = (asset as Sprite);
-							AvatarInvoke(sprite, AvaterType.Social);
-						}
-					});
-			}
+			//else if (!string.IsNullOrEmpty(facebookId))
+			//{
+			//	if (sprite != null)
+			//	{
+			//		AvatarInvoke(sprite, AvaterType.Social);
+			//		return;
+			//	}
+			//	AvatarInvoke(SingletonClass<AvaterUtility>.Get().GetAvater(), AvaterType.Normal);
+			//	if (string.IsNullOrEmpty(picture))
+			//	{
+			//		picture = string.Format("https://graph.facebook.com/{0}/picture?access_token={1}&width={2}&height={2}", facebookId, SingletonBehaviour<FacebookMananger>.Get().TokenString, 80);
+			//	}
+			//	TaskHelper.GetMiniDownload().AppendTask(new ImageTask(picture, facebookId)).RemoveAllListeners()
+			//		.AddListener(delegate(object asset, float p)
+			//		{
+			//			if (asset != null)
+			//			{
+			//				sprite = (asset as Sprite);
+			//				AvatarInvoke(sprite, AvaterType.Social);
+			//			}
+			//		});
+			//}
 			else
 			{
 				AvatarInvoke(SingletonClass<AvaterUtility>.Get().GetAvater(), AvaterType.Normal);

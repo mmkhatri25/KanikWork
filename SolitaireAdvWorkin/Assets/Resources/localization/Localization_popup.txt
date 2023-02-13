@@ -29,7 +29,7 @@
     },
     {
         "key": "desc_out_of_coins",
-        "English": "You need more coins. Please come to store for more.",
+        "English": "You need more coins.",
         "German": "Du brauchst mehr Münzen. Du bekommst sie im Laden.",
         "Spanish": "Necesitas más monedas. Ve a la tienda para más.",
         "French": "Il vous faut plus de pièces. Veuillez aller à la boutique pour en obtenir plus."

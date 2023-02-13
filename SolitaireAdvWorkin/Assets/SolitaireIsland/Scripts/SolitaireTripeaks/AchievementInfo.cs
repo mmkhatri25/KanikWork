@@ -53,12 +53,15 @@ namespace SolitaireTripeaks
 				IAchievementTarget = (IAchievementTarget)Activator.CreateInstance(EnumUtility.GetStringType(Config.achievementType));
 			}
 			string text = IAchievementTarget.GetDescription(this);
-			if (!string.IsNullOrEmpty(GetConfig().Date))
-			{
-				string arg = DateTime.Parse(GetConfig().Date).ToString("ddd, d MMM yyyy", LocalizationUtility.GetCultureInfo());
-				arg = string.Format(LocalizationUtility.Get("Localization_achievement.json").GetString("On Day"), arg);
-				text = $"{arg}: {text}";
-			}
+			//if (!string.IsNullOrEmpty(GetConfig().Date))
+			//{
+				//string arg = DateTime.Parse(GetConfig().Date).ToString("ddd, d MMM yyyy", LocalizationUtility.GetCultureInfo());
+				//arg = string.Format(LocalizationUtility.Get("Localization_achievement.json").GetString("On Day"), arg);
+    //       //     arg = string.Format(LocalizationUtility.Get("Localization_achievement.json").GetString("On Day"), null);
+                    
+				//text = $"{arg}: {text}";
+                ////text = string.Format(LocalizationUtility.Get("Localization_achievement.json").GetString("On Day"));
+			//}
 			return text;
 		}
 
@@ -68,6 +71,8 @@ namespace SolitaireTripeaks
 			{
 				IAchievementTarget = (IAchievementTarget)Activator.CreateInstance(EnumUtility.GetStringType(Config.achievementType));
 			}
+            //DebugConsole.Log("data is here...",);
+            
 			return IAchievementTarget.GetTitle(this);
 		}
 

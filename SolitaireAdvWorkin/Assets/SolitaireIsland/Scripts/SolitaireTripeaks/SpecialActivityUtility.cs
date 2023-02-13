@@ -205,6 +205,8 @@ namespace SolitaireTripeaks
 
 		public bool ShowSpecialActivitySale(UnityAction unityAction)
 		{
+            return true;
+        
             Debug.Log("here is also showing sale scene....");
 			SingletonClass<MySceneManager>.Get().Popup<SpecialActivitySaleScene>("Activity/ActivitySale").AddClosedListener(unityAction);
 			return true;

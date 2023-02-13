@@ -174,7 +174,7 @@ namespace SolitaireTripeaks
             {
                 if (number > 0)
                 {
-                    AchievementData.Get().DoAchievement(AchievementType.InviteFriend, number);
+                 //   AchievementData.Get().DoAchievement(AchievementType.InviteFriend, number);
                     TipPopupNoIconScene.ShowInviteFriends();
                 }
             }, LocalizationUtility.Get("Localization_facebook.json").GetString("fb_invite_friend"), null, "Invite", "Pyramid Solitaire");

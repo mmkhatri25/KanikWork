@@ -49,6 +49,7 @@ namespace SolitaireTripeaks
 
 		private void UpdatePlayers()
 		{
+            return;
 			isRunning = true;
 			string facebookId = SingletonBehaviour<FacebookMananger>.Get().UserId;
 			Dictionary<string, object> userData;

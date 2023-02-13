@@ -107,22 +107,22 @@ namespace SolitaireTripeaks
 
 		public void GetObject(UnityAction<GameObject> unityAction)
 		{
-			if (sceneName.EndsWith(".asset"))
-			{
-				GetAssetBundle(delegate(AssetBundle ass)
-				{
-					if (string.IsNullOrEmpty(prefabName))
-					{
-						prefabName = "SaleScene";
-                        Debug.Log("here is sale scene is building....");
-					}
-					unityAction(ass.LoadAsset<GameObject>(prefabName));
-				});
-			}
-			else
-			{
-				unityAction(SingletonBehaviour<LoaderUtility>.Get().GetAsset<GameObject>(sceneName));
-			}
+			//if (sceneName.EndsWith(".asset"))
+			//{
+			//	GetAssetBundle(delegate(AssetBundle ass)
+			//	{
+			//		if (string.IsNullOrEmpty(prefabName))
+			//		{
+			//			prefabName = "SaleScene";
+   //                     Debug.Log("here is sale scene is building....");
+			//		}
+			//		unityAction(ass.LoadAsset<GameObject>(prefabName));
+			//	});
+			//}
+			//else
+			//{
+			//	unityAction(SingletonBehaviour<LoaderUtility>.Get().GetAsset<GameObject>(sceneName));
+			//}
 		}
 
 		public string GetString()

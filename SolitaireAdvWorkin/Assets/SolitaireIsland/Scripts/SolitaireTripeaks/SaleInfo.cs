@@ -53,60 +53,60 @@ namespace SolitaireTripeaks
 
 		public void Show(UnityAction unityAction = null)
 		{
-			if (SaleConfig != null && SaleConfig.IsReady())
-			{
-				SaleConfig.GetObject(delegate(GameObject sceneObject)
-				{
-					ShowNumber++;
-					GameObject gameObject = UnityEngine.Object.Instantiate(sceneObject);
-					if (gameObject.GetComponent<SaleScene>() != null)
-					{
-						SaleScene saleScene = SingletonClass<MySceneManager>.Get().Popup<SaleScene>(gameObject);
-						saleScene.OnStart(this, new DateTime(saleTimeLeft));
-						saleScene.AddClosedListener(unityAction);
-					}
-					else
-					{
-						StoreOffSaleScene storeOffSaleScene = SingletonClass<MySceneManager>.Get().Popup<StoreOffSaleScene>(gameObject);
-						storeOffSaleScene.OnStart(DateTime.Now.Add(GetTimeSpan()));
-						storeOffSaleScene.AddClosedListener(unityAction);
-					}
-				});
-			}
-			else if (unityAction != null)
-			{
-				unityAction();
-			}
+			//if (SaleConfig != null && SaleConfig.IsReady())
+			//{
+			//	SaleConfig.GetObject(delegate(GameObject sceneObject)
+			//	{
+			//		ShowNumber++;
+			//		GameObject gameObject = UnityEngine.Object.Instantiate(sceneObject);
+			//		if (gameObject.GetComponent<SaleScene>() != null)
+			//		{
+			//			SaleScene saleScene = SingletonClass<MySceneManager>.Get().Popup<SaleScene>(gameObject);
+			//			saleScene.OnStart(this, new DateTime(saleTimeLeft));
+			//			saleScene.AddClosedListener(unityAction);
+			//		}
+			//		else
+			//		{
+			//			StoreOffSaleScene storeOffSaleScene = SingletonClass<MySceneManager>.Get().Popup<StoreOffSaleScene>(gameObject);
+			//			storeOffSaleScene.OnStart(DateTime.Now.Add(GetTimeSpan()));
+			//			storeOffSaleScene.AddClosedListener(unityAction);
+			//		}
+			//	});
+			//}
+			//else if (unityAction != null)
+			//{
+			//	unityAction();
+			//}
 		}
 
 		public void CreateSale(UnityAction<BaseScene> unityAction)
 		{
-			if (SaleConfig != null && SaleConfig.IsReady())
-			{
-				SaleConfig.GetObject(delegate(GameObject sceneObject)
-				{
-					ShowNumber++;
-					GameObject gameObject = UnityEngine.Object.Instantiate(sceneObject);
-					if (gameObject.GetComponent<SaleScene>() != null)
-					{
-						SaleScene component = gameObject.GetComponent<SaleScene>();
-						component.OnStart(this, new DateTime(saleTimeLeft));
-						if (component != null && unityAction != null)
-						{
-							unityAction(component);
-						}
-					}
-					else
-					{
-						StoreOffSaleScene component2 = gameObject.GetComponent<StoreOffSaleScene>();
-						component2.OnStart(DateTime.Now.Add(GetTimeSpan()));
-						if (component2 != null && unityAction != null)
-						{
-							unityAction(component2);
-						}
-					}
-				});
-			}
+			//if (SaleConfig != null && SaleConfig.IsReady())
+			//{
+			//	SaleConfig.GetObject(delegate(GameObject sceneObject)
+			//	{
+			//		ShowNumber++;
+			//		GameObject gameObject = UnityEngine.Object.Instantiate(sceneObject);
+			//		if (gameObject.GetComponent<SaleScene>() != null)
+			//		{
+			//			SaleScene component = gameObject.GetComponent<SaleScene>();
+			//			component.OnStart(this, new DateTime(saleTimeLeft));
+			//			if (component != null && unityAction != null)
+			//			{
+			//				unityAction(component);
+			//			}
+			//		}
+			//		else
+			//		{
+			//			StoreOffSaleScene component2 = gameObject.GetComponent<StoreOffSaleScene>();
+			//			component2.OnStart(DateTime.Now.Add(GetTimeSpan()));
+			//			if (component2 != null && unityAction != null)
+			//			{
+			//				unityAction(component2);
+			//			}
+			//		}
+			//	});
+			//}
 		}
 
 		public void PutBuy(string id)
