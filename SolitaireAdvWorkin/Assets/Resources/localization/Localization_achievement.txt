@@ -415,7 +415,7 @@
     },
     {
         "key": "Use_Rocket",
-        "English": "Use {0} Rocket",
+        "English": "Use {0} Rockets",
         "German": "Benutze {0} Rakete",
         "Spanish": "Use {0} cohete",
         "French": "Utiliser {0} Rocket"
@@ -429,7 +429,7 @@
     },
     {
         "key": "Use_Snake",
-        "English": "Use {0} Trident",
+        "English": "Use {0} Tridents",
         "German": "Verwenden Sie {0} Trident",
         "Spanish": "Usa {0} tridente",
         "French": "Utiliser {0} Trident"

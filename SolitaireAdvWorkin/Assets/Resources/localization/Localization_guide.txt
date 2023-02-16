@@ -8,7 +8,7 @@
     },
     {
         "key": "rule_basic_title_desc",
-        "English": "Collect cards 1 higher or lower than your hand card. Win Coins for collect each card!",
+        "English": "Collect cards 1 higher or lower than your hand card. Win coins for collecting each Card.",
         "German": "Sammle Karten ein, die um 1 höher oder niedriger als deine Handkarte sind. Erhalte Münzen für jede eingesammelte Karte.",
         "Spanish": "Reúne cartas superiores o inferiores en 1 a la carta de tu mano. Gana monedas por cada carta.",
         "French": "Collectionnez les cartes immédiatement supérieures ou inférieures à celle dans votre main. Gagnez des pièces pour chaque carte collectionnée"
@@ -21,8 +21,8 @@
         "French": "Étoile"
     },
     {
-        "key": "rule_star_desc",
-        "English": "Collect 5 cards in a row to get the first Combo Star. Then collect 5 cards in a row for 2 times to get the Second Combo Star."
+        "key": "rule_star_desc", 
+        "English": "Collect 5 cards in a row to get the first combo star. Then collect 5 cards in a row twice to get the Second Combo Star."
     },
     {
         "key": "rule_undo_title",
@@ -47,7 +47,7 @@
     },
     {
         "key": "cards_golden_desc",
-        "English": "Collect any available card from the desk including Hazard Card!",
+        "English": "Collect any available card from the deck including Hazard Card!",
         "German": "Sammle jede verfügbare Karte auf dem Tisch einschließlich Risiko-Karte ein.",
         "Spanish": "Roba cualquier carta disponible de la baraja, incluidas las cartas peligrosas",
         "French": "Permet de collectionner n'importe quelle carte sur le plateau, même les cartes Danger"
@@ -61,7 +61,7 @@
     },
     {
         "key": "cards_rocket_desc",
-        "English": "Collect 7 random cards from the desk.",
+        "English": "Collect 7 random cards from the deck.",
         "German": "Sammle 7 zufällig ausgewählte Karten vom Tisch ein.",
         "Spanish": "Robe 7 cartas aleatorias de la baraja.",
         "French": "Collectionnez 7 cartes aléatoires sur le plateau."
@@ -117,7 +117,7 @@
     },
     {
         "key": "hazards_rope_desc",
-        "English": "Remove Cobweb Cards by clear them twice.",
+        "English": "Remove Cobweb Cards by clearing them twice.",
         "German": "Entferne Seilkarten, indem du sie zweimal abräumst.",
         "Spanish": "Elimina las cartas cuerda al despejarlas dos veces.",
         "French": "Retirez les cartes Cordes en les supprimant deux fois."
@@ -198,7 +198,7 @@
     },
     {
         "key": "booster_tongyong_desc",
-        "English": "You can use him to exchange any booster."
+        "English": "Shell can be exchanged for any booster."
     },
     {
         "key": "booster_magic_eye_title",

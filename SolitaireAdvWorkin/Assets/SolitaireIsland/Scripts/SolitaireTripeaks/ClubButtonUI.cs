@@ -10,14 +10,24 @@ namespace SolitaireTripeaks
 		public Text RemainLabel;
 
 		public RectTransform Content;
+        public GameObject button;
 
 		private void Start()
 		{
 			UpdateExclamationMark();
-			InvokeRepeating("UpdateExclamationMark", 1f, 1f);
-		}
-
-		public void UpdateExclamationMark()
+            //InvokeRepeating("UpdateExclamationMark", 1f, 1f);
+            if (PlayerPrefs.HasKey("isClicked")&& PlayerPrefs.GetInt("isClicked")==1)
+            {
+                this.gameObject.GetComponent<Image>().gameObject.SetActive(false);
+            }
+        }
+        public void onclick()
+        {
+            PlayerPrefs.SetInt("isClicked",1);
+                this.gameObject.GetComponent<Image>().gameObject.SetActive(false);
+            
+        }
+        public void UpdateExclamationMark()
 		{
 			SingletonBehaviour<GlobalConfig>.Get().CreateExclamationMark(base.gameObject, SingletonBehaviour<ClubSystemHelper>.Get().HasSuperTreasure() == SuperTreasure.Normal || ClubSystemData.Get().GetLeaderboardDatas().Count > 0);
 			Content.gameObject.SetActive(!string.IsNullOrEmpty(SingletonBehaviour<ClubSystemHelper>.Get().GetClubIdentifier()));
