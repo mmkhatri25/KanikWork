@@ -63,6 +63,7 @@ namespace SolitaireTripeaks
 			{
 				QuestTarget = (QuestTarget)Activator.CreateInstance(EnumUtility.GetStringType(QuestType));
 			}
+           DebugConsole.Log ("Quest description - "+QuestTarget.GetRightDescription(this));
 			return QuestTarget.GetRightDescription(this);
 		}
 

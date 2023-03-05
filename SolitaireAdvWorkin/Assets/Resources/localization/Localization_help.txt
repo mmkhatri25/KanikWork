@@ -43,14 +43,14 @@
     },
     {
         "key": "help_play_multiple_bonus",
-        "English": "Collect 5 cards in a row will win Combo Bonus Coins each time!",
+        "English": "Collect 5 cards in a row to win Combo Bonus Coins each time!",
         "German": "Sammle 5 Karten hintereinander ein, um Kombobonus-Münzen zu gewinnen.",
         "Spanish": "Cada vez que reúnas 5 cartas seguidas obtendrás monedas de la bonificación de combinación.",
         "French": "Collectionnez 5 cartes d'affilée pour gagner des Pièces bonus de combo à chaque fois"
     },
     {
         "key": "help_play_multiple_got_star",
-        "English": "You got the Combo Star!\nCollect 5 cards in a row reach 3 times will get the Combo Star!!!",
+        "English": "You got the Combo Star!\nCollect 5 cards in row thrice to get the Combo Star!!!",
         "German": "Du hast den Kombostern!\nSammle 3-mal 5 Karten hintereinander ein, um den Kombostern zu erhalten.",
         "Spanish": "Has conseguido la estrella de combinación.\nReúne 5 cartas seguidas 3 veces y recibirás la estrella de combinación.",
         "French": "Vous avez obtenu une Étoile combo.\nCollectionnez 5 cartes d'affilée à 3 reprises pour obtenir l'Étoile combo"
@@ -92,7 +92,7 @@
     },
     {
         "key": "help_rocket",
-        "English": "A Rocket Card collect 7 random cards!\nTap the <color=#FFC300FF>Rocket Card</color> now!",
+        "English": "The Rocket Card collects 7 random Cards from the Deck! \nTap the <color=#FFC300FF>Rocket Card</color> now!",
         "German": "Raketenkarte: Sammle 7 zufällig ausgewählte Karten ein.\nTippe jetzt auf die Raketenkarte.",
         "Spanish": "Una carta misil reúne 7 cartas aleatorias.\nToca la carta misil.",
         "French": "La carte Fusée permet de collectionner 7 cartes aléatoires. Touchez-la."

@@ -511,17 +511,17 @@ namespace SolitaireTripeaks
 
 		private static bool ShowBankTips(UnityAction unityAction = null)
 		{
-			if (CoinBankData.Get().IsBankOpening())
-			{
-				if (CoinBankData.Get().IsOpened)
-				{
-					return false;
-				}
-				CoinBankData.Get().IsOpened = true;
-				BankButtonUI.UUUUpdateUI();
-				SingletonClass<MySceneManager>.Get().Popup<BankCoinsScene>("Scenes/BankCoinsScene").AddClosedListener(unityAction);
-				return true;
-			}
+			//if (CoinBankData.Get().IsBankOpening())
+			//{
+			//	if (CoinBankData.Get().IsOpened)
+			//	{
+			//		return false;
+			//	}
+			//	CoinBankData.Get().IsOpened = true;
+			//	BankButtonUI.UUUUpdateUI();
+			//	SingletonClass<MySceneManager>.Get().Popup<BankCoinsScene>("Scenes/BankCoinsScene").AddClosedListener(unityAction);
+			//	return true;
+			//}
 			return false;
 		}
 

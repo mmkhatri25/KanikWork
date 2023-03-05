@@ -20,6 +20,7 @@ namespace SolitaireTripeaks
 		public void SetInfo(QuestConfig config)
 		{
 			SetConfigInfo(config);
+            print("quest desc - "+ config.GetDescriptionInBox());
 			DescriptionLabel.text = config.GetDescriptionInBox();
 			StartTime = config.GetStartTime();
 			DelayDo(delegate
@@ -37,6 +38,8 @@ namespace SolitaireTripeaks
 		{
 			RewardLabelUI.SetImage((config.Type != 0) ? DoubleTreauseSprite : DoubleBuyStepSprite);
 			DescriptionLabel.text = config.GetDescriptionInBox();
+            print("active quest desc - "+ config.GetDescriptionInBox());
+            
 			StartTime = config.Time;
 			DelayDo(delegate
 			{
@@ -53,6 +56,8 @@ namespace SolitaireTripeaks
 		{
 			RewardLabelUI.SetImage((config.Type != 0) ? DoubleTreauseSprite : DoubleBuyStepSprite);
 			DescriptionLabel.text = config.GetDescription();
+            print("active quest desc - "+ config.GetDescriptionInBox());
+            
 			StartTime = config.Time.AddDays(1.0);
 			base.transform.Find("btn_go").HasVaule(delegate(Transform button)
 			{

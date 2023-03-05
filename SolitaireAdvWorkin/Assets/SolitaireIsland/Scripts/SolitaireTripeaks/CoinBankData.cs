@@ -23,7 +23,8 @@ namespace SolitaireTripeaks
 
 		public bool IsBankRunning()
 		{
-			return IsBankOpening() && IsOpened;
+            Debug.Log("IsBankRunning");
+            return false;//IsBankOpening() && IsOpened;
 		}
 
 		public bool IsBankOpening()

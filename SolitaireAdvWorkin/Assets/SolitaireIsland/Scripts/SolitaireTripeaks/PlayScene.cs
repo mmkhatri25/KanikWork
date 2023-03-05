@@ -337,20 +337,20 @@ namespace SolitaireTripeaks
 		{
 			float endValue = (!visable) ? (-143) : 143;
 			VideoStepButton.interactable = false;
-			if (visable)
-			{
-				if (!watchCompleted && (StatisticsData.Get().IsLowPlayer() || AuxiliaryData.Get().GetDailyNumber("WatchAdAddCards") < 1) && SingletonBehaviour<ThirdPartyAdManager>.Get().IsRewardedVideoAvailable(AuxiliaryData.Get().WatchVideoCount) && PlayData.Get().HasThanLevelData(0, 0, 6))
-				{
-					VideoStepButton.transform.DOLocalMoveY(endValue, 0.5f).OnComplete(delegate
-					{
-						VideoStepButton.interactable = true;
-					});
-				}
-			}
-			else
-			{
-				VideoStepButton.transform.DOLocalMoveY(endValue, 0.5f);
-			}
+			//if (visable)
+			//{
+			//	if (!watchCompleted && (StatisticsData.Get().IsLowPlayer() || AuxiliaryData.Get().GetDailyNumber("WatchAdAddCards") < 1) && SingletonBehaviour<ThirdPartyAdManager>.Get().IsRewardedVideoAvailable(AuxiliaryData.Get().WatchVideoCount) && PlayData.Get().HasThanLevelData(0, 0, 6))
+			//	{
+			//		VideoStepButton.transform.DOLocalMoveY(endValue, 0.5f).OnComplete(delegate
+			//		{
+			//			VideoStepButton.interactable = true;
+			//		});
+			//	}
+			//}
+			//else
+			//{
+			//	VideoStepButton.transform.DOLocalMoveY(endValue, 0.5f);
+			//}
 			BuyStepButton.interactable = false;
 			SingletonBehaviour<EscapeInputManager>.Get().AppendKey("DelayBuyStepButton");
 			BuyStepButton.DOKill();

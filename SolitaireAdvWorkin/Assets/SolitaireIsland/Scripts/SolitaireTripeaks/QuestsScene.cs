@@ -90,10 +90,14 @@ namespace SolitaireTripeaks
 				orderby e.QuestStyle
 				select e)
 			{
+                if (item.GetDescription() == "+10 More Cards for same price")
+                    return;
+                print("here quest infor - "+ item.GetDescription());
 				QuestUI component = UnityEngine.Object.Instantiate(SingletonBehaviour<LoaderUtility>.Get().GetAsset<GameObject>(typeof(QuestsScene).Name, "UI/QuestUI")).GetComponent<QuestUI>();
 				component.transform.SetParent(_QuestRectTransform, worldPositionStays: false);
 				component.transform.SetSiblingIndex(0);
 				component.UpdateUI(item, TryRefQuests);
+                
 				if (!list.Contains(item) && item.QuestStyle == QuestStyle.Event)
 				{
 					component.SetNewObject();
@@ -101,6 +105,10 @@ namespace SolitaireTripeaks
 			}
 			foreach (QuestConfig quest in QuestConfigGroup.Get().GetQuests())
 			{
+             if (quest.GetDescription() == "+10 More Cards for same price")
+                    return;
+                print("here quest infor - "+ quest.GetDescription());
+            
 				if (!quest.IsStart() && !quest.IsInvalid())
 				{
 					QuestUpcomingUI component2 = UnityEngine.Object.Instantiate(SingletonBehaviour<LoaderUtility>.Get().GetAsset<GameObject>(typeof(QuestsScene).Name, "UI/QuestUpcomingUI")).GetComponent<QuestUpcomingUI>();
@@ -110,6 +118,10 @@ namespace SolitaireTripeaks
 			}
 			foreach (DayActivityConfig dayActivityConfig in SingletonClass<DayActivityHelper>.Get().GetDayActivityConfigs())
 			{
+             if (dayActivityConfig.GetDescription() == "+10 More Cards for same price")
+                    return;
+                print("here quest infor - "+ dayActivityConfig.GetDescription());
+            
 				if (!dayActivityConfig.IsInvalid() && !dayActivityConfig.IsRunning())
 				{
 					QuestUpcomingUI component3 = UnityEngine.Object.Instantiate(SingletonBehaviour<LoaderUtility>.Get().GetAsset<GameObject>(typeof(QuestsScene).Name, "UI/QuestUpcomingUI")).GetComponent<QuestUpcomingUI>();
@@ -127,8 +139,13 @@ namespace SolitaireTripeaks
 			_ClosedButton.transform.DOScale(1f, 0.2f).SetDelay((!hasGoButton) ? 1f : 0.2f);
 			foreach (DayActivityConfig dayActivityConfig2 in SingletonClass<DayActivityHelper>.Get().GetDayActivityConfigs())
 			{
+                if (dayActivityConfig2.GetDescription() == "+10 More Cards for same price")
+                    return;
+                print("here quest infor - "+ dayActivityConfig2.GetDescription());
+            
 				if (dayActivityConfig2.IsRunning())
 				{
+                
 					QuestUpcomingUI component4 = UnityEngine.Object.Instantiate(SingletonBehaviour<LoaderUtility>.Get().GetAsset<GameObject>(typeof(QuestsScene).Name, "UI/QuestUpcomingUI2")).GetComponent<QuestUpcomingUI>();
 					component4.transform.SetParent(_QuestRectTransform, worldPositionStays: false);
 					component4.transform.SetSiblingIndex(0);
@@ -159,6 +176,7 @@ namespace SolitaireTripeaks
 		private void TryRefQuests(QuestStyle style)
 		{
 			QuestInfo questInfo = SingletonClass<QuestHelper>.Get().TryAppendOnceQuests(style);
+            print("quest info - "+ questInfo);
 			if (questInfo != null)
 			{
 				QuestUI component = UnityEngine.Object.Instantiate(SingletonBehaviour<LoaderUtility>.Get().GetAsset<GameObject>(typeof(QuestsScene).Name, "UI/QuestUI")).GetComponent<QuestUI>();
