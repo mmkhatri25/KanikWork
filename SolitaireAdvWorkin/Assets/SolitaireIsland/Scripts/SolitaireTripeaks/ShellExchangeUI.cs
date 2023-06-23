@@ -14,9 +14,12 @@ namespace SolitaireTripeaks
 
 		public void OnStart(BoosterType boosterType)
 		{
+
 			Icon.sprite = AppearNodeConfig.Get().GetBoosterSprite(boosterType);
 			ExchangeButton.onClick.AddListener(delegate
 			{
+            print("boosterType - "+ BoosterType.RandomBooster);
+            
 				if (SessionData.Get().UseCommodity(BoosterType.RandomBooster, 1L))
 				{
 					AudioUtility.GetSound().Play("Audios/buy_booster.mp3");

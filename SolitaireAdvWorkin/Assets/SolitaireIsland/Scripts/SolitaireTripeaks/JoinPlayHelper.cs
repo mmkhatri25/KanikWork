@@ -73,13 +73,13 @@ namespace SolitaireTripeaks
 
 		public static BaseScene JoinSelectionIslandScene(int world, UnityAction<bool> unityAction = null)
 		{
-			if ((UnityEngine.Object.FindObjectOfType<WorldScene>() != null 
-				|| UnityEngine.Object.FindObjectOfType<IslandScene>() != null) 
-				&& !UniverseConfig.Get().HasThumbnailInWorld(world))
-			{
-				TipPopupNoIconScene.ShowDataDownloading("JoinSelectionIslandScene not HasThumbnailInWorld");
-				return null;
-			}
+			//if ((UnityEngine.Object.FindObjectOfType<WorldScene>() != null 
+			//	|| UnityEngine.Object.FindObjectOfType<IslandScene>() != null) 
+			//	&& !UniverseConfig.Get().HasThumbnailInWorld(world))
+			//{
+			//	TipPopupNoIconScene.ShowDataDownloading("JoinSelectionIslandScene not HasThumbnailInWorld");
+			//	return null;
+			//}
 
 			Func<BaseScene> CreatorSelectionIslandScene = delegate
 			{
@@ -93,7 +93,7 @@ namespace SolitaireTripeaks
 				WorldScene worldScene = SingletonClass<MySceneManager>.Get().Navigation<WorldScene>("Scenes/WorldScene");
 				worldScene.AddLoadListener(delegate(bool success)
 				{
-					TipPopupNoIconScene.ShowDataDownloading("JoinSelectionIslandScene WorldScene");
+					//TipPopupNoIconScene.ShowDataDownloading("JoinSelectionIslandScene WorldScene");
 
 					unityAction?.Invoke(success);
                 });
@@ -140,29 +140,29 @@ namespace SolitaireTripeaks
 						return islandScene;
 					});
 				}
-				else if (UniverseConfig.Get().HasThumbnailInWorld(schedule.world))
-				{
-					GlobalLoadingAnimation.Show("Scenes/LoadingGameScene", () => JoinSelectionIslandScene(schedule.world, delegate(bool success)
-					{
-						if (success)
-						{
-							if (chapterConfig.IsSupportVersion())
-							{
-								TipPopupNoIconScene.ShowDataDownloading("JoinPlayByQuest HasThumbnailInWorld");
-							}
-#if ENABLE_UPDATE_VERSION
-							else
-							{
-								TipPopupNoIconScene.ShowNeedUpdateVersion();
-							}
-#endif
-						}
-					}));
-				}
-				else
-				{
-					TipPopupNoIconScene.ShowDataDownloading("JoinPlayByQuest none");
-				}
+//				else if (UniverseConfig.Get().HasThumbnailInWorld(schedule.world))
+//				{
+//					GlobalLoadingAnimation.Show("Scenes/LoadingGameScene", () => JoinSelectionIslandScene(schedule.world, delegate(bool success)
+//					{
+//						if (success)
+//						{
+//							if (chapterConfig.IsSupportVersion())
+//							{
+//								TipPopupNoIconScene.ShowDataDownloading("JoinPlayByQuest HasThumbnailInWorld");
+//							}
+//#if ENABLE_UPDATE_VERSION
+//							else
+//							{
+//								TipPopupNoIconScene.ShowNeedUpdateVersion();
+//							}
+//#endif
+				//		}
+				//	}));
+				//}
+				//else
+				//{
+				//	TipPopupNoIconScene.ShowDataDownloading("JoinPlayByQuest none");
+				//}
 			}
 		}
 
@@ -191,6 +191,7 @@ namespace SolitaireTripeaks
 
 		public static void JoinIslandByGameEnd(ScheduleData schedule)
 		{
+            Debug.Log("new island ....");
 			QuestsScene.TryShow(delegate
 			{
 				if (schedule.world == -1)
@@ -393,6 +394,8 @@ namespace SolitaireTripeaks
 
 		public static bool ShowExpertLocking()
 		{
+                return false;
+        
 			MenuUIRight menuUIRight = FindRight();
 			if (menuUIRight == null)
 			{
@@ -527,6 +530,7 @@ namespace SolitaireTripeaks
 
 		public static bool ShowClubOpenTips()
 		{
+            Debug.Log("Yes Iam here club open.....");
 			if (AuxiliaryData.Get().HasView("ClubOpenTips"))
 			{
 				return false;
@@ -570,10 +574,10 @@ namespace SolitaireTripeaks
 			{
 				return true;
 			}
-			if (ShowClubOpenTips())
-			{
-				return true;
-			}
+			//if (ShowClubOpenTips())
+			//{
+			//	return true;
+			//}
 			if (ShowBankTips())
 			{
 				return true;
@@ -686,11 +690,11 @@ namespace SolitaireTripeaks
 						{
 							PokerData.Get().PutPoker(purchasingCommodity.count);
 						}
-						else if (purchasingCommodity.boosterType == BoosterType.DoubleStar)
-						{
-							RankCoinData.Get().AppendDoubleStarByThreeHours(purchasingCommodity.count);
-							MenuUITopLeft.UpdateDoubleStarRemianUI();
-						}
+						//else if (purchasingCommodity.boosterType == BoosterType.DoubleStar)
+						//{
+						//	RankCoinData.Get().AppendDoubleStarByThreeHours(purchasingCommodity.count);
+						//	MenuUITopLeft.UpdateDoubleStarRemianUI();
+						//}
 						else if (purchasingCommodity.boosterType == BoosterType.UnlimitedPlay)
 						{
 							purchasingCommodity.count = Mathf.Max(purchasingCommodity.count * 30, 30);
@@ -727,7 +731,7 @@ namespace SolitaireTripeaks
 					List<PurchasingCommodity> list = package.commoditys.ToList();
 					list.RemoveAll((PurchasingCommodity e) => e.boosterType == BoosterType.World);
 					list.RemoveAll((PurchasingCommodity e) => e.boosterType == BoosterType.UnlimitedPlay);
-					list.RemoveAll((PurchasingCommodity e) => e.boosterType == BoosterType.DoubleStar);
+					//list.RemoveAll((PurchasingCommodity e) => e.boosterType == BoosterType.DoubleStar);
 					list.RemoveAll((PurchasingCommodity e) => e.boosterType == BoosterType.Poker);
 					list.RemoveAll((PurchasingCommodity e) => e.boosterType == BoosterType.WildEvent);
 					list.RemoveAll((PurchasingCommodity e) => e.boosterType == BoosterType.GuessGame);

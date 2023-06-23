@@ -38,7 +38,9 @@ namespace SolitaireTripeaks
 			},
 			new WheelData
 			{
-				boosterType = BoosterType.FreePlay,
+				//boosterType = BoosterType.FreePlay,
+                boosterType = BoosterType.RandomBooster,
+                
 				Rewards = 1,
 				Probality = 20
 			},
@@ -62,7 +64,9 @@ namespace SolitaireTripeaks
 			},
 			new WheelData
 			{
-				boosterType = BoosterType.FreePlay,
+				//boosterType = BoosterType.FreePlay,
+                boosterType = BoosterType.RandomBooster,
+                
 				Rewards = 1,
 				Probality = 20
 			},

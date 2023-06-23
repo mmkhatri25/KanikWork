@@ -57,15 +57,15 @@ namespace SolitaireTripeaks
 			ChangeRank(SingletonBehaviour<LeaderBoardUtility>.Get().GetRankType());
 			SingletonBehaviour<LeaderBoardUtility>.Get().RankChanged.AddListener(ChangeRank);
 			SingletonBehaviour<GlobalConfig>.Get().CreateNumber(DoubleButton.gameObject, 1f, (int)PackData.Get().GetCommodity(BoosterType.DoubleStar).GetTotal(), left: false, -10f, -10f);
-			DoubleButton.onClick.AddListener(delegate
-			{
-				if (SingletonBehaviour<LeaderBoardUtility>.Get().GetRankType() == RankType.Upload)
-				{
-					SingletonBehaviour<GlobalConfig>.Get().BuyDoubleBooster();
-					SingletonBehaviour<GlobalConfig>.Get().CreateNumber(DoubleButton.gameObject, 1f, (int)PackData.Get().GetCommodity(BoosterType.DoubleStar).GetTotal(), left: false, -10f, -10f);
-					RepeatingUpdate();
-				}
-			});
+			//DoubleButton.onClick.AddListener(delegate
+			//{
+			//	if (SingletonBehaviour<LeaderBoardUtility>.Get().GetRankType() == RankType.Upload)
+			//	{
+			//		SingletonBehaviour<GlobalConfig>.Get().BuyDoubleBooster();
+			//		SingletonBehaviour<GlobalConfig>.Get().CreateNumber(DoubleButton.gameObject, 1f, (int)PackData.Get().GetCommodity(BoosterType.DoubleStar).GetTotal(), left: false, -10f, -10f);
+			//		RepeatingUpdate();
+			//	}
+			//});
 			InvokeRepeating("RepeatingUpdate", 0f, 1f);
 		}
 

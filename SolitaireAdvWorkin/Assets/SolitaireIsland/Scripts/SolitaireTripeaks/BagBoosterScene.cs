@@ -41,9 +41,20 @@ namespace SolitaireTripeaks
 				}
 			}
 			NoPackage.gameObject.SetActive(Content.childCount == 0);
-		}
+            print("content is - "+ Content.childCount);
+            //foreach (GameObject item in Content)
+            //{
+            //    item.SetActive(false);
+            //}
+            
+           
+            for (int i = 14; i < 19; i++)
+            {
+               Destroy( Content.GetChild(i).gameObject);
+            }
+        }
 
-		protected override void OnDestroy()
+        protected override void OnDestroy()
 		{
 			base.OnDestroy();
 			SingletonBehaviour<LoaderUtility>.Get().UnLoadScene(typeof(BagBoosterScene).Name);

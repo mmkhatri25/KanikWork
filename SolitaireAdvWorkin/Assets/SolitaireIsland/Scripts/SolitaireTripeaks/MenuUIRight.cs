@@ -64,16 +64,23 @@ namespace SolitaireTripeaks
 
 		private void Awake()
 		{
+          //SessionData.Get().PutCommodity(BoosterType.FreeSlotsPlay, CommoditySource.Buy, 1L);
+          //SessionData.Get().PutCommodity(BoosterType.FreeSlotsPlay, CommoditySource.Buy, 1L);
+          //SessionData.Get().PutCommodity(BoosterType.FreeWheelPlay, CommoditySource.Buy, 1L);
+          //SessionData.Get().PutCommodity(BoosterType.FreeWheelPlay, CommoditySource.Buy, 1L);
+          //SessionData.Get().PutCommodity(BoosterType.FreeWheelPlay, CommoditySource.Buy, 1L);
+          //SessionData.Get().PutCommodity(BoosterType.FreeWheelPlay, CommoditySource.Buy, 1L);
+            ExportButton.gameObject.SetActive(false);
 			UpdateFacebook(SingletonBehaviour<FacebookMananger>.Get().IsLogin());
 			SingletonBehaviour<FacebookMananger>.Get().LoginChanged.AddListener(UpdateFacebook);
-			SingletonBehaviour<GlobalConfig>.Get().CreateExclamationMark(ExportButton.gameObject, _IsExpertDaily && PlayData.Get().MustPlayMasterLevel());
-			ExportButton.gameObject.SetActive(PlayData.Get().HasThanLevelData(0, 4, 18));
-			ExportButton.onClick.AddListener(delegate
-			{
-				_IsExpertDaily = false;
-				SingletonBehaviour<GlobalConfig>.Get().CreateExclamationMark(ExportButton.gameObject, number: false);
-				SingletonClass<MySceneManager>.Get().Popup<ExpertLevelScene>("Scenes/ExpertLevelScene");
-			});
+		//SingletonBehaviour<GlobalConfig>.Get().CreateExclamationMark(ExportButton.gameObject, _IsExpertDaily && PlayData.Get().MustPlayMasterLevel());
+			//ExportButton.gameObject.SetActive(PlayData.Get().HasThanLevelData(0, 4, 18));
+			//ExportButton.onClick.AddListener(delegate
+			//{
+			//	_IsExpertDaily = false;
+			//	SingletonBehaviour<GlobalConfig>.Get().CreateExclamationMark(ExportButton.gameObject, number: false);
+			//	SingletonClass<MySceneManager>.Get().Popup<ExpertLevelScene>("ScExportButtonnes/ExpertLevelScene");
+			//});
 			FacebookButton.onClick.AddListener(delegate
 			{
 				SingletonBehaviour<GlobalConfig>.Get().ShowLoginFacebook(AuxiliaryData.Get().IsFacebookReward);
@@ -97,7 +104,8 @@ namespace SolitaireTripeaks
 				SingletonBehaviour<GlobalConfig>.Get().CreateExclamationMark(QuestButton.gameObject, number: false);
 			});
 			SingletonBehaviour<GlobalConfig>.Get().CreateExclamationMark(QuestButton.gameObject, QuestData.Get().GetNumber() > 0);
-			ClubButton.gameObject.SetActive(SingletonBehaviour<ClubSystemHelper>.Get().IsActive());
+          //ClubButton.gameObject.SetActive(SingletonBehaviour<ClubSystemHelper>.Get().IsActive());
+			ClubButton.gameObject.SetActive(false);
 			ClubButton.onClick.AddListener(delegate
 			{
 				//SingletonBehaviour<ClubSystemHelper>.Get().ShowClubScene();

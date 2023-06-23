@@ -293,6 +293,13 @@ namespace SolitaireTripeaks
 				extras.Remove(baseExtra);
 			}
 		}
+            public void RemoveVineExtra(VineExtra baseExtra)
+        {
+            if (extras.Contains(baseExtra))
+            {
+                extras.Remove(baseExtra);
+            }
+        }
 
 		public void DestoryByMatch(BaseCard baseCard)
 		{

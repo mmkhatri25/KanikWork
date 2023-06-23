@@ -29,7 +29,11 @@ namespace SolitaireTripeaks
 				{
 					selected = component.gameObject;
 				}
-			}
+                print("card  name -- "+component.TitleLabel.text);
+                if (component.TitleLabel.text == "Christmas" || component.TitleLabel.text == "Halloween") {
+                    component.gameObject.SetActive(false);
+                }
+            }
 			DelayDo(delegate
 			{
 				CenterToSelected(selected);

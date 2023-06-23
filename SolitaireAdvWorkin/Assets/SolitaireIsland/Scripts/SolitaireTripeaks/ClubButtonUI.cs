@@ -15,16 +15,16 @@ namespace SolitaireTripeaks
 		private void Start()
 		{
 			UpdateExclamationMark();
-            //InvokeRepeating("UpdateExclamationMark", 1f, 1f);
+            InvokeRepeating("UpdateExclamationMark", 1f, 1f);
             if (PlayerPrefs.HasKey("isClicked")&& PlayerPrefs.GetInt("isClicked")==1)
             {
-                this.gameObject.GetComponent<Image>().gameObject.SetActive(false);
+                //this.gameObject.GetComponent<Image>().gameObject.SetActive(false);
             }
         }
         public void onclick()
         {
             PlayerPrefs.SetInt("isClicked",1);
-                this.gameObject.GetComponent<Image>().gameObject.SetActive(false);
+             //   this.gameObject.GetComponent<Image>().gameObject.SetActive(false);
             
         }
         public void UpdateExclamationMark()

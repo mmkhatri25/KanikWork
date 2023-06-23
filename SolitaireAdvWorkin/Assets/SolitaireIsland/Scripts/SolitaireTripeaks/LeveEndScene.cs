@@ -1,3 +1,4 @@
+using System.Collections;
 using DG.Tweening;
 using Nightingale.Localization;
 using Nightingale.ScenesManager;
@@ -54,6 +55,7 @@ namespace SolitaireTripeaks
 
 		public static LeveEndScene Create(int level)
 		{
+        
 			LeveEndScene component = Object.Instantiate(SingletonBehaviour<LoaderUtility>.Get().GetAsset<GameObject>(typeof(LeveEndScene).Name, "Scenes/LevelEndScene")).GetComponent<LeveEndScene>();
 			component.gameObject.SetActive(value: false);
 			component.OnAwake(level);
@@ -75,157 +77,356 @@ namespace SolitaireTripeaks
 
 		public void OnStart(LevelData levelData)
 		{
-			base.IsStay = true;
-			this.levelData = levelData;
-			blueStarLevelData = RankCoinData.Get().GetLevelData(SingletonClass<AAOConfig>.Get().GetLevel(), content);
-			LevelLabel.text = SingletonClass<AAOConfig>.Get().GetLevelString();
-			ReplayButton.gameObject.SetActive(value: false);
-			NextButton.gameObject.SetActive(value: false);
-			CloseTransform.gameObject.SetActive(value: false);
-			if (levelData.StarComplete)
-			{
-				int stars = PlayData.Get().GetStars();
-				RecordDataType recordDataType = RankCoinData.Get().PutLevelData(SingletonClass<AAOConfig>.Get().GetLevel(), levelData, content);
-				if (recordDataType == RecordDataType.FirstRecord || recordDataType == RecordDataType.NewRecord)
-				{
-					if (!StatisticsData.Get().IsCheatPlayer())
-					{
-						SingletonBehaviour<LeaderBoardUtility>.Get().UploadScore(RankCoinData.Get().GetRankCoinNumbers(), AuxiliaryData.Get().AvaterFileName, delegate
-						{
-							if (!isDestory)
-							{
-								MiniLeaderBoardUI.OnLeaderBoardStart(delay: true);
-							}
-						});
-					}
-				}
-				else
-				{
-					MiniLeaderBoardUI.OnLeaderBoardStart(delay: false);
-				}
-				ScheduleData playSchedule = SingletonClass<AAOConfig>.Get().GetPlaySchedule();
-				if (PlayData.Get().PutLevelData(playSchedule, levelData) == RecordDataType.FirstRecord && playSchedule.world != -1)
-				{
-					SingletonBehaviour<TripeaksPlayerHelper>.Get().UploadTripeaksPlayer();
-				}
-				SingletonClass<QuestHelper>.Get().DoQuest(QuestType.WinRow);
-				SingletonClass<QuestHelper>.Get().DoQuest(QuestType.WinGame);
-				AchievementData.Get().DoAchievement(AchievementType.Win);
-				SingletonClass<QuestHelper>.Get().DoQuest(QuestType.WinGameInScene, playSchedule);
-				AchievementData.Get().PutAchievement(AchievementType.WinIn, playSchedule);
-				int stars2 = PlayData.Get().GetStars();
-				SingletonClass<QuestHelper>.Get().DoQuest(QuestType.GetNewStar, stars2 - stars);
-				AchievementData.Get().CalcAchievement(playSchedule.world, playSchedule.chapter);
-				AchievementData.Get().PutAchievement(AchievementType.CompeletedLevel, playSchedule);
-				SingletonClass<OnceGameData>.Get().UploadSuccess(playSchedule);
-				AudioUtility.GetSound().Play("Audios/Level_Completed.mp3");
-				Object.Instantiate(SingletonBehaviour<LoaderUtility>.Get().GetAsset<GameObject>(typeof(LeveEndScene).Name, "Particles/Ribbons"), base.transform);
-			}
-			else
-			{
-				MiniLeaderBoardUI.OnLeaderBoardStart(delay: false);
-			}
-		}
+            print("here level complete..."+ levelData);
+            //if (PlayerPrefs.HasKey("EndGame") && PlayerPrefs.GetInt("EndGame") == 1)
+            //{
 
-		public void OpenAnimator()
-		{
-			base.gameObject.SetActive(value: true);
-			ScheduleData playSchedule = SingletonClass<AAOConfig>.Get().GetPlaySchedule();
-			if (!StatisticsData.Get().IsCheatPlayer())
-			{
-				SingletonBehaviour<ClubSystemHelper>.Get().Contribute(Mathf.CeilToInt((float)SingletonClass<OnceGameData>.Get().WonTotalCoins() / 100f));
-			}
-			SingletonClass<QuestHelper>.Get().DoQuest(QuestType.WinCoins, SingletonClass<OnceGameData>.Get().WonTotalCoins());
-			GameLevelStarGroupUI.SetAnimationLevelData(levelData);
-			LeaderBoardLevelStarGroupUI.SetLeaderBoardAnimationLevelData(blueStarLevelData, levelData);
-			TaskQueueOnByoneUtility taskQueueOnByoneUtility = new TaskQueueOnByoneUtility();
-			float duration = 1f;
-			taskQueueOnByoneUtility.AddTask(delegate(UnityAction unityAction)
-			{
-				int coins3 = 0;
-				duration = (float)SingletonClass<OnceGameData>.Get().CompletionCoins / 10f;
-				duration = Mathf.Min(duration, 0.5f);
-				AudioUtility.GetSound().PlayLoop("Audios/loop_coin.mp3", duration);
-				DOTween.To(() => coins3, delegate(int coin)
-				{
-					CompletionCoinsLabel.text = $"{coin}";
-				}, SingletonClass<OnceGameData>.Get().CompletionCoins, duration).OnComplete(delegate
-				{
-					if (unityAction != null)
-					{
-						unityAction();
-					}
-				});
-			});
-			taskQueueOnByoneUtility.AddTask(delegate(UnityAction unityAction)
-			{
-				int coins2 = 0;
-				duration = (float)SingletonClass<OnceGameData>.Get().StreaksCoins / 10f;
-				duration = Mathf.Min(duration, 0.5f);
-				AudioUtility.GetSound().PlayLoop("Audios/loop_coin.mp3", duration);
-				DOTween.To(() => coins2, delegate(int coin)
-				{
-					StreaksCoinsLabel.text = $"{coin}";
-				}, SingletonClass<OnceGameData>.Get().StreaksCoins, duration).OnComplete(delegate
-				{
-					if (unityAction != null)
-					{
-						unityAction();
-					}
-				});
-			});
-			if (SingletonClass<OnceGameData>.Get().CompletionMoreCoins > 0)
-			{
-				ClanMoreLabel.gameObject.SetActive(value: true);
-				ClanMoreLabel.SetText(SingletonClass<OnceGameData>.Get().CompletionMoreCoins);
-			}
-			if (!string.IsNullOrEmpty(SingletonBehaviour<ClubSystemHelper>.Get().GetClubIdentifier()) && SingletonBehaviour<ClubSystemHelper>.Get().GetRankType() == RankType.Upload)
-			{
-				ClanPointsLabel.gameObject.SetActive(value: true);
-				ClanPointsLabel.SetText(Mathf.CeilToInt((float)SingletonClass<OnceGameData>.Get().WonTotalCoins() / 100f));
-			}
-			taskQueueOnByoneUtility.AddTask(delegate(UnityAction unityAction)
-			{
-				int coins = 0;
-				int num = SingletonClass<OnceGameData>.Get().WonCoins();
-				duration = (float)num / 10f;
-				duration = Mathf.Min(duration, 1f);
-				AudioUtility.GetSound().PlayLoop("Audios/loop_coin.mp3", duration);
-				DOTween.To(() => coins, delegate(int coin)
-				{
-					WonCoinsLabel.text = $"{coin}";
-				}, num, 1f).OnComplete(delegate
-				{
-					if (unityAction != null)
-					{
-						unityAction();
-					}
-				});
-			});
-			taskQueueOnByoneUtility.Run(delegate
-			{
-				ScheduleData nextSchedule = SingletonClass<AAOConfig>.Get().GetNextSchedule(playSchedule);
-				CloseTransform.gameObject.SetActive(value: true);
-				ReplayButton.gameObject.SetActive(value: true);
-				NextButton.gameObject.SetActive(PlayData.Get().HasLevelData(playSchedule) && !nextSchedule.IsEmpty());
-				if (playSchedule.world == 0 && playSchedule.chapter == 0 && (playSchedule.level == 0 || playSchedule.level == 1) && levelData.Star >= 3)
-				{
-					ReplayButton.gameObject.SetActive(value: false);
-				}
-				Scale(0f, NextButton.transform);
-				Scale(0f, ReplayButton.transform);
-				Scale(0f, CloseTransform, delegate
-				{
-					SetCanvasGraphicRaycaster(enabled: true);
-				});
-			});
-			CloseTransform.localScale = Vector3.zero;
-			HouseTransform.localScale = Vector3.zero;
-			Sequence s = DOTween.Sequence();
-			s.Append(Scale(0f, HouseTransform));
-			s.Append(Scale(0f, FlowerTransform));
-			s.Join(Scale(0f, LightTransform));
+            //    SingletonClass<MySceneManager>.Get().Popup<TipPopupNoIconScene>("Scenes/Pops/TipPopupNoIcon").OnStart("Congrats!", "Finished all Levels.", "OK", delegate
+            //            {
+            //                SingletonClass<MySceneManager>.Get().Close(new JoinEffect(JoinEffectDir.Bottom));
+            //            });
+            //    print("yes this is end " + PlayerPrefs.GetInt("EndGame"));
+
+
+            //    //     PurchasSuccessPopup.ShowEndGame(new PurchasingCommodity[1]
+            //    //{
+            //    //    new PurchasingCommodity
+            //    //    {
+            //    //        boosterType = BoosterType.None,
+            //    //        count = 0
+            //    //    }
+            //    //});
+            //}
+            //else
+            {
+                print("end game not - " + PlayerPrefs.GetInt("EndGame"));
+
+
+                //SessionData.Get().PutCommodity(BoosterType.RandomBooster, CommoditySource.Buy, 1L);
+                base.IsStay = true;
+                this.levelData = levelData;
+                blueStarLevelData = RankCoinData.Get().GetLevelData(SingletonClass<AAOConfig>.Get().GetLevel(), content);
+                LevelLabel.text = SingletonClass<AAOConfig>.Get().GetLevelString();
+                ReplayButton.gameObject.SetActive(value: false);
+                NextButton.gameObject.SetActive(value: false);
+                CloseTransform.gameObject.SetActive(value: false);
+                if (levelData.StarComplete)
+                {
+                    int stars = PlayData.Get().GetStars();
+                    RecordDataType recordDataType = RankCoinData.Get().PutLevelData(SingletonClass<AAOConfig>.Get().GetLevel(), levelData, content);
+                    if (recordDataType == RecordDataType.FirstRecord || recordDataType == RecordDataType.NewRecord)
+                    {
+                        if (!StatisticsData.Get().IsCheatPlayer())
+                        {
+                            SingletonBehaviour<LeaderBoardUtility>.Get().UploadScore(RankCoinData.Get().GetRankCoinNumbers(), AuxiliaryData.Get().AvaterFileName, delegate
+                            {
+                                if (!isDestory)
+                                {
+                                    MiniLeaderBoardUI.OnLeaderBoardStart(delay: true);
+                                }
+                            });
+                        }
+                    }
+                    else
+                    {
+                        MiniLeaderBoardUI.OnLeaderBoardStart(delay: false);
+                    }
+                    ScheduleData playSchedule = SingletonClass<AAOConfig>.Get().GetPlaySchedule();
+                    if (PlayData.Get().PutLevelData(playSchedule, levelData) == RecordDataType.FirstRecord && playSchedule.world != -1)
+                    {
+                        SingletonBehaviour<TripeaksPlayerHelper>.Get().UploadTripeaksPlayer();
+                    }
+                    SingletonClass<QuestHelper>.Get().DoQuest(QuestType.WinRow);
+                    SingletonClass<QuestHelper>.Get().DoQuest(QuestType.WinGame);
+                    AchievementData.Get().DoAchievement(AchievementType.Win);
+                    SingletonClass<QuestHelper>.Get().DoQuest(QuestType.WinGameInScene, playSchedule);
+                    AchievementData.Get().PutAchievement(AchievementType.WinIn, playSchedule);
+                    int stars2 = PlayData.Get().GetStars();
+                    SingletonClass<QuestHelper>.Get().DoQuest(QuestType.GetNewStar, stars2 - stars);
+                    AchievementData.Get().CalcAchievement(playSchedule.world, playSchedule.chapter);
+                    AchievementData.Get().PutAchievement(AchievementType.CompeletedLevel, playSchedule);
+                    SingletonClass<OnceGameData>.Get().UploadSuccess(playSchedule);
+                    AudioUtility.GetSound().Play("Audios/Level_Completed.mp3");
+                    Object.Instantiate(SingletonBehaviour<LoaderUtility>.Get().GetAsset<GameObject>(typeof(LeveEndScene).Name, "Particles/Ribbons"), base.transform);
+                }
+                else
+                {
+                    MiniLeaderBoardUI.OnLeaderBoardStart(delay: false);
+                }
+            }
+            //StartCoroutine(showEndLevel(levelData));
 		}
+        IEnumerator showEndLevel(LevelData data)
+        {
+            print("showEndLevel");
+            yield return new WaitForSeconds(5f);
+               base.IsStay = true;
+            this.levelData = data;
+            blueStarLevelData = RankCoinData.Get().GetLevelData(SingletonClass<AAOConfig>.Get().GetLevel(), content);
+            LevelLabel.text = SingletonClass<AAOConfig>.Get().GetLevelString();
+            ReplayButton.gameObject.SetActive(value: false);
+            NextButton.gameObject.SetActive(value: false);
+            CloseTransform.gameObject.SetActive(value: false);
+            if (levelData.StarComplete)
+            {
+                int stars = PlayData.Get().GetStars();
+                RecordDataType recordDataType = RankCoinData.Get().PutLevelData(SingletonClass<AAOConfig>.Get().GetLevel(), levelData, content);
+                if (recordDataType == RecordDataType.FirstRecord || recordDataType == RecordDataType.NewRecord)
+                {
+                    if (!StatisticsData.Get().IsCheatPlayer())
+                    {
+                        SingletonBehaviour<LeaderBoardUtility>.Get().UploadScore(RankCoinData.Get().GetRankCoinNumbers(), AuxiliaryData.Get().AvaterFileName, delegate
+                        {
+                            if (!isDestory)
+                            {
+                                MiniLeaderBoardUI.OnLeaderBoardStart(delay: true);
+                            }
+                        });
+                    }
+                }
+                else
+                {
+                    MiniLeaderBoardUI.OnLeaderBoardStart(delay: false);
+                }
+                ScheduleData playSchedule = SingletonClass<AAOConfig>.Get().GetPlaySchedule();
+                if (PlayData.Get().PutLevelData(playSchedule, levelData) == RecordDataType.FirstRecord && playSchedule.world != -1)
+                {
+                    SingletonBehaviour<TripeaksPlayerHelper>.Get().UploadTripeaksPlayer();
+                }
+                SingletonClass<QuestHelper>.Get().DoQuest(QuestType.WinRow);
+                SingletonClass<QuestHelper>.Get().DoQuest(QuestType.WinGame);
+                AchievementData.Get().DoAchievement(AchievementType.Win);
+                SingletonClass<QuestHelper>.Get().DoQuest(QuestType.WinGameInScene, playSchedule);
+                AchievementData.Get().PutAchievement(AchievementType.WinIn, playSchedule);
+                int stars2 = PlayData.Get().GetStars();
+                SingletonClass<QuestHelper>.Get().DoQuest(QuestType.GetNewStar, stars2 - stars);
+                AchievementData.Get().CalcAchievement(playSchedule.world, playSchedule.chapter);
+                AchievementData.Get().PutAchievement(AchievementType.CompeletedLevel, playSchedule);
+                SingletonClass<OnceGameData>.Get().UploadSuccess(playSchedule);
+                AudioUtility.GetSound().Play("Audios/Level_Completed.mp3");
+                Object.Instantiate(SingletonBehaviour<LoaderUtility>.Get().GetAsset<GameObject>(typeof(LeveEndScene).Name, "Particles/Ribbons"), base.transform);
+            }
+            else
+            {
+                MiniLeaderBoardUI.OnLeaderBoardStart(delay: false);
+            }
+        }
+
+        public void OpenAnimator()
+		{
+           
+            if (PlayerPrefs.HasKey("EndGame") && PlayerPrefs.GetInt("EndGame") == 1)
+            {
+
+                SingletonClass<MySceneManager>.Get().Popup<TipPopupNoIconScene>("Scenes/Pops/TipPopupNoIcon").OnStart("Congrats!", "Finished all Levels.", "OK", delegate
+                        {
+                            SingletonClass<MySceneManager>.Get().Close(new JoinEffect(JoinEffectDir.Bottom), ClosedClick);
+                        });
+                        
+                         PlayerPrefs.SetInt("EndGame", 0);
+                        
+            }
+            else
+            {
+                base.gameObject.SetActive(value: true);
+                ScheduleData playSchedule = SingletonClass<AAOConfig>.Get().GetPlaySchedule();
+                if (!StatisticsData.Get().IsCheatPlayer())
+                {
+                    SingletonBehaviour<ClubSystemHelper>.Get().Contribute(Mathf.CeilToInt((float)SingletonClass<OnceGameData>.Get().WonTotalCoins() / 100f));
+                }
+                SingletonClass<QuestHelper>.Get().DoQuest(QuestType.WinCoins, SingletonClass<OnceGameData>.Get().WonTotalCoins());
+                GameLevelStarGroupUI.SetAnimationLevelData(levelData);
+                LeaderBoardLevelStarGroupUI.SetLeaderBoardAnimationLevelData(blueStarLevelData, levelData);
+                TaskQueueOnByoneUtility taskQueueOnByoneUtility = new TaskQueueOnByoneUtility();
+                float duration = 1f;
+                taskQueueOnByoneUtility.AddTask(delegate (UnityAction unityAction)
+                {
+                    int coins3 = 0;
+                    duration = (float)SingletonClass<OnceGameData>.Get().CompletionCoins / 10f;
+                    duration = Mathf.Min(duration, 0.5f);
+                    AudioUtility.GetSound().PlayLoop("Audios/loop_coin.mp3", duration);
+                    DOTween.To(() => coins3, delegate (int coin)
+                    {
+                        CompletionCoinsLabel.text = $"{coin}";
+                    }, SingletonClass<OnceGameData>.Get().CompletionCoins, duration).OnComplete(delegate
+                    {
+                        if (unityAction != null)
+                        {
+                            unityAction();
+                        }
+                    });
+                });
+                taskQueueOnByoneUtility.AddTask(delegate (UnityAction unityAction)
+                {
+                    int coins2 = 0;
+                    duration = (float)SingletonClass<OnceGameData>.Get().StreaksCoins / 10f;
+                    duration = Mathf.Min(duration, 0.5f);
+                    AudioUtility.GetSound().PlayLoop("Audios/loop_coin.mp3", duration);
+                    DOTween.To(() => coins2, delegate (int coin)
+                    {
+                        StreaksCoinsLabel.text = $"{coin}";
+                    }, SingletonClass<OnceGameData>.Get().StreaksCoins, duration).OnComplete(delegate
+                    {
+                        if (unityAction != null)
+                        {
+                            unityAction();
+                        }
+                    });
+                });
+                if (SingletonClass<OnceGameData>.Get().CompletionMoreCoins > 0)
+                {
+                    ClanMoreLabel.gameObject.SetActive(value: true);
+                    ClanMoreLabel.SetText(SingletonClass<OnceGameData>.Get().CompletionMoreCoins);
+                }
+                if (!string.IsNullOrEmpty(SingletonBehaviour<ClubSystemHelper>.Get().GetClubIdentifier()) && SingletonBehaviour<ClubSystemHelper>.Get().GetRankType() == RankType.Upload)
+                {
+                    ClanPointsLabel.gameObject.SetActive(value: true);
+                    ClanPointsLabel.SetText(Mathf.CeilToInt((float)SingletonClass<OnceGameData>.Get().WonTotalCoins() / 100f));
+                }
+                taskQueueOnByoneUtility.AddTask(delegate (UnityAction unityAction)
+                {
+                    int coins = 0;
+                    int num = SingletonClass<OnceGameData>.Get().WonCoins();
+                    duration = (float)num / 10f;
+                    duration = Mathf.Min(duration, 1f);
+                    AudioUtility.GetSound().PlayLoop("Audios/loop_coin.mp3", duration);
+                    DOTween.To(() => coins, delegate (int coin)
+                    {
+                        WonCoinsLabel.text = $"{coin}";
+                    }, num, 1f).OnComplete(delegate
+                    {
+                        if (unityAction != null)
+                        {
+                            unityAction();
+                        }
+                    });
+                });
+                taskQueueOnByoneUtility.Run(delegate
+                {
+                    ScheduleData nextSchedule = SingletonClass<AAOConfig>.Get().GetNextSchedule(playSchedule);
+                    CloseTransform.gameObject.SetActive(value: true);
+                    ReplayButton.gameObject.SetActive(value: true);
+                    NextButton.gameObject.SetActive(PlayData.Get().HasLevelData(playSchedule) && !nextSchedule.IsEmpty());
+                    if (playSchedule.world == 0 && playSchedule.chapter == 0 && (playSchedule.level == 0 || playSchedule.level == 1) && levelData.Star >= 3)
+                    {
+                        ReplayButton.gameObject.SetActive(value: false);
+                    }
+                    Scale(0f, NextButton.transform);
+                    Scale(0f, ReplayButton.transform);
+                    Scale(0f, CloseTransform, delegate
+                    {
+                        SetCanvasGraphicRaycaster(enabled: true);
+                    });
+                });
+                CloseTransform.localScale = Vector3.zero;
+                HouseTransform.localScale = Vector3.zero;
+                Sequence s = DOTween.Sequence();
+                s.Append(Scale(0f, HouseTransform));
+                s.Append(Scale(0f, FlowerTransform));
+                s.Join(Scale(0f, LightTransform));
+            }
+		}
+        public void OpenAnimatorAllLevel()
+        {
+           
+            base.gameObject.SetActive(value: true);
+            ScheduleData playSchedule = SingletonClass<AAOConfig>.Get().GetPlaySchedule();
+            if (!StatisticsData.Get().IsCheatPlayer())
+            {
+                SingletonBehaviour<ClubSystemHelper>.Get().Contribute(Mathf.CeilToInt((float)SingletonClass<OnceGameData>.Get().WonTotalCoins() / 100f));
+            }
+            SingletonClass<QuestHelper>.Get().DoQuest(QuestType.WinCoins, SingletonClass<OnceGameData>.Get().WonTotalCoins());
+            GameLevelStarGroupUI.SetAnimationLevelData(levelData);
+            LeaderBoardLevelStarGroupUI.SetLeaderBoardAnimationLevelData(blueStarLevelData, levelData);
+            TaskQueueOnByoneUtility taskQueueOnByoneUtility = new TaskQueueOnByoneUtility();
+            float duration = 1f;
+            taskQueueOnByoneUtility.AddTask(delegate(UnityAction unityAction)
+            {
+                int coins3 = 0;
+                duration = (float)SingletonClass<OnceGameData>.Get().CompletionCoins / 10f;
+                duration = Mathf.Min(duration, 0.5f);
+                AudioUtility.GetSound().PlayLoop("Audios/loop_coin.mp3", duration);
+                DOTween.To(() => coins3, delegate(int coin)
+                {
+                    CompletionCoinsLabel.text = $"{coin}";
+                }, SingletonClass<OnceGameData>.Get().CompletionCoins, duration).OnComplete(delegate
+                {
+                    if (unityAction != null)
+                    {
+                        unityAction();
+                    }
+                });
+            });
+            taskQueueOnByoneUtility.AddTask(delegate(UnityAction unityAction)
+            {
+                int coins2 = 0;
+                duration = (float)SingletonClass<OnceGameData>.Get().StreaksCoins / 10f;
+                duration = Mathf.Min(duration, 0.5f);
+                AudioUtility.GetSound().PlayLoop("Audios/loop_coin.mp3", duration);
+                DOTween.To(() => coins2, delegate(int coin)
+                {
+                    StreaksCoinsLabel.text = $"{coin}";
+                }, SingletonClass<OnceGameData>.Get().StreaksCoins, duration).OnComplete(delegate
+                {
+                    if (unityAction != null)
+                    {
+                        unityAction();
+                    }
+                });
+            });
+            if (SingletonClass<OnceGameData>.Get().CompletionMoreCoins > 0)
+            {
+                ClanMoreLabel.gameObject.SetActive(value: true);
+                ClanMoreLabel.SetText(SingletonClass<OnceGameData>.Get().CompletionMoreCoins);
+            }
+            if (!string.IsNullOrEmpty(SingletonBehaviour<ClubSystemHelper>.Get().GetClubIdentifier()) && SingletonBehaviour<ClubSystemHelper>.Get().GetRankType() == RankType.Upload)
+            {
+                ClanPointsLabel.gameObject.SetActive(value: true);
+                ClanPointsLabel.SetText(Mathf.CeilToInt((float)SingletonClass<OnceGameData>.Get().WonTotalCoins() / 100f));
+            }
+            taskQueueOnByoneUtility.AddTask(delegate(UnityAction unityAction)
+            {
+                int coins = 0;
+                int num = SingletonClass<OnceGameData>.Get().WonCoins();
+                duration = (float)num / 10f;
+                duration = Mathf.Min(duration, 1f);
+                AudioUtility.GetSound().PlayLoop("Audios/loop_coin.mp3", duration);
+                DOTween.To(() => coins, delegate(int coin)
+                {
+                    WonCoinsLabel.text = $"{coin}";
+                }, num, 1f).OnComplete(delegate
+                {
+                    if (unityAction != null)
+                    {
+                        unityAction();
+                    }
+                });
+            });
+            taskQueueOnByoneUtility.Run(delegate
+            {
+                ScheduleData nextSchedule = SingletonClass<AAOConfig>.Get().GetNextSchedule(playSchedule);
+                CloseTransform.gameObject.SetActive(value: true);
+                ReplayButton.gameObject.SetActive(value: true);
+                NextButton.gameObject.SetActive(PlayData.Get().HasLevelData(playSchedule) && !nextSchedule.IsEmpty());
+                if (playSchedule.world == 0 && playSchedule.chapter == 0 && (playSchedule.level == 0 || playSchedule.level == 1) && levelData.Star >= 3)
+                {
+                    ReplayButton.gameObject.SetActive(value: false);
+                }
+                Scale(0f, NextButton.transform);
+                Scale(0f, ReplayButton.transform);
+                Scale(0f, CloseTransform, delegate
+                {
+                    SetCanvasGraphicRaycaster(enabled: true);
+                });
+            });
+            CloseTransform.localScale = Vector3.zero;
+            HouseTransform.localScale = Vector3.zero;
+            Sequence s = DOTween.Sequence();
+            s.Append(Scale(0f, HouseTransform));
+            s.Append(Scale(0f, FlowerTransform));
+            s.Join(Scale(0f, LightTransform));
+        }
+
 
 		public void NextClick()
 		{

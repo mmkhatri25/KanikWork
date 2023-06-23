@@ -314,6 +314,7 @@ namespace SolitaireTripeaks
 
 		public bool IsLock(int world)
 		{
+        
 			if (GetWorldData(world) != null)
 			{
 				return false;

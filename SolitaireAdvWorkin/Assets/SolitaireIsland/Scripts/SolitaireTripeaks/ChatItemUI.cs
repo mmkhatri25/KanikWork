@@ -66,7 +66,7 @@ namespace SolitaireTripeaks
 									PurchasingCommodity[] commoditys2 = SingletonBehaviour<ClubSystemHelper>.Get().GetCommoditys(array[2]);
 									foreach (PurchasingCommodity purchasingCommodity in commoditys2)
 									{
-										if (purchasingCommodity.boosterType == BoosterType.Rocket || purchasingCommodity.boosterType == BoosterType.Wild || purchasingCommodity.boosterType == BoosterType.DoubleStar)
+										if (purchasingCommodity.boosterType == BoosterType.Rocket || purchasingCommodity.boosterType == BoosterType.Wild /*|| purchasingCommodity.boosterType == BoosterType.DoubleStar*/)
 										{
 											text += $" {AppearNodeConfig.Get().GetBoosterQuestTitle(purchasingCommodity.boosterType)} {AppearNodeConfig.Get().GetBoosterByNumber(purchasingCommodity.boosterType, purchasingCommodity.count)}";
 										}

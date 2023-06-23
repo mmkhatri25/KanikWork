@@ -70,12 +70,12 @@ namespace SolitaireTripeaks
 		public List<BoosterType> GetAllPackBoosters()
 		{
 			List<BoosterType> allRandomBoosters = GetAllRandomBoosters();
-			allRandomBoosters.Add(BoosterType.FreePlay);
+			//allRandomBoosters.Add(BoosterType.FreePlay);
 			allRandomBoosters.Add(BoosterType.FreeSlotsPlay);
 			allRandomBoosters.Add(BoosterType.FreeWheelPlay);
 			allRandomBoosters.Add(BoosterType.Rocket);
 			allRandomBoosters.Add(BoosterType.Wild);
-			allRandomBoosters.Add(BoosterType.DoubleStar);
+			//allRandomBoosters.Add(BoosterType.DoubleStar);
 			return (from e in allRandomBoosters
 				orderby e
 				select e).ToList();

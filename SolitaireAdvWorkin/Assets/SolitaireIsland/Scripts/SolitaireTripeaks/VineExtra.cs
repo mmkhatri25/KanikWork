@@ -76,6 +76,7 @@ namespace SolitaireTripeaks
 
 		public override void DestoryByBooster()
 		{
+            print("vine removed....111");
 			baseCard.RemoveExtra(this);
 			RemoveAnimtor(delegate
 			{
@@ -83,7 +84,15 @@ namespace SolitaireTripeaks
 				PlayDesk.Get().CalcTopCard();
 				PlayDesk.Get().DestopChanged();
 			});
-			OperatingHelper.Get().ClearStep();
+            this.gameObject.SetActive(false);
+            
+			//OperatingHelper.Get().ClearStep();
+                            //baseCard.DestoryCollect(step: false);
+                //baseCard.RemoveExtra(this);
+                //RemoveAnimtor(delegate
+                //{
+                //    UnityEngine.Object.Destroy(base.gameObject);
+                //});
 		}
 
 		public override bool DestoryByColor()
@@ -93,6 +102,8 @@ namespace SolitaireTripeaks
 
 		public override bool DestoryByGolden()
 		{
+            print("vine removed....222");
+        
 			LifeState lifeState = _LifeState;
 			if (lifeState == LifeState.Running)
 			{
@@ -119,6 +130,7 @@ namespace SolitaireTripeaks
 				});
 				PlayDesk.Get().AppendBusyTime(sequence.Duration());
 				OperatingHelper.Get().ClearStep();
+                this.gameObject.SetActive(false);
 				return true;
 			}
 			DestoryByBooster();
@@ -128,6 +140,8 @@ namespace SolitaireTripeaks
 
 		public override bool DestoryByMatch(BaseCard card)
 		{
+            print("vine removed....333");
+        
 			LifeState lifeState = _LifeState;
 			if (lifeState == LifeState.Running)
 			{
@@ -155,6 +169,7 @@ namespace SolitaireTripeaks
 				});
 				PlayDesk.Get().AppendBusyTime(sequence.Duration());
 				OperatingHelper.Get().ClearStep();
+                this.gameObject.SetActive(false);
 				return true;
 			}
 			DestoryByBooster();
@@ -164,6 +179,8 @@ namespace SolitaireTripeaks
 
 		public override bool DestoryByRocket()
 		{
+            print("vine removed....444");
+        
 			if (_LifeState == LifeState.Running)
 			{
 				PlayDesk.Get().LinkOnce(baseCard.transform.position);

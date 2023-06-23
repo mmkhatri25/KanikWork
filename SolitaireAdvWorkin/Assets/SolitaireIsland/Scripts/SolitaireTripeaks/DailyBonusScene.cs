@@ -54,16 +54,16 @@ namespace SolitaireTripeaks
 				if (RewardRowDays >= commodities.Length)
 				{
 					AuxiliaryData.Get().RewardRowDays = 0;
-					list.Add(new PurchasingCommodity
-					{
-						boosterType = BoosterType.DoubleStar,
-						count = 1
-					});
-					list.Add(new PurchasingCommodity
-					{
-						boosterType = BoosterType.ExpiredPlay,
-						count = 3
-					});
+					//list.Add(new PurchasingCommodity
+					//{
+					//	boosterType = BoosterType.DoubleStar,
+					//	count = 1
+					//});
+					//list.Add(new PurchasingCommodity
+					//{
+					//	boosterType = BoosterType.ExpiredPlay,
+					//	count = 3
+					//});
 					list.Add(new PurchasingCommodity
 					{
 						boosterType = BoosterType.FreeSlotsPlay,

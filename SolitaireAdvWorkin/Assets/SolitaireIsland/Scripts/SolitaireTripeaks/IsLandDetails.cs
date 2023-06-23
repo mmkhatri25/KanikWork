@@ -72,6 +72,7 @@ namespace SolitaireTripeaks
 
 		public void OnStart(IslandScene islandScene, int world, int chapter)
 		{
+            print("here on start");
             if (transform.Find("SmallLight") != null)
             {
                 transform.Find("SmallLight").gameObject.SetActive(false);
@@ -123,6 +124,7 @@ namespace SolitaireTripeaks
 			gameObject3 = UnityEngine.Object.Instantiate(SingletonBehaviour<LoaderUtility>.Get().GetAsset<GameObject>("ui/Boat02UI"));
 			gameObject3.transform.SetParent(base.transform.Find("Boat 02"), worldPositionStays: false);
 			SingletonBehaviour<TripeaksPlayerHelper>.Get().AddListener(UpdateFriendsSchedule);
+            
 		}
 
 		public void JumpTo(ScheduleData schedule, float delay)
@@ -161,15 +163,19 @@ namespace SolitaireTripeaks
     //                print("here is showing facebook.....");
 				//}
 				//else 
-                if (!AuxiliaryData.Get().RewardRowOpen && schedule.Equals(new ScheduleData(0, 0, 5)))
-				{
-					AuxiliaryData.Get().RewardRowOpen = true;
-					SingletonClass<MySceneManager>.Get().Popup<DailyBonusScene>("Scenes/DailyBonusScene").AddClosedListener(delegate
-					{
-						JumpTo(schedule, delay);
-					});
-				}
-				else if (PokerData.Get().IsPokerThemeOpen() && !PokerData.Get().IsTips)
+    //            if (!AuxiliaryData.Get().RewardRowOpen && schedule.Equals(new ScheduleData(0, 0, 5)))
+				//{
+                
+    //                print("here bonus jumping");
+                
+				//	AuxiliaryData.Get().RewardRowOpen = true;
+				//	SingletonClass<MySceneManager>.Get().Popup<DailyBonusScene>("Scenes/DailyBonusScene").AddClosedListener(delegate
+				//	{
+				//		JumpTo(schedule, delay);
+				//	});
+				//}
+				//else 
+                if (PokerData.Get().IsPokerThemeOpen() && !PokerData.Get().IsTips)
 				{
 					MenuUIRight.GetMenu().OpenButtonsWithTips();
 					JoinPlayHelper.CreateButtonTips(MenuUIRight.GetMenu().PokerThemeButton, JoinEffectDir.Top, LocalizationUtility.Get("Localization_help.json").GetString("PokerTreasure_Desc"), delegate
@@ -299,13 +305,17 @@ namespace SolitaireTripeaks
 			};
 			if (playerLevel == schedule.level)
 			{
+                print("Here I am  - "+ schedule.level);
 				unityAction();
 			}
 			else if (schedule.level < levelControls.Length)
 			{
+
 				DelayDo(new WaitForSeconds(delay), delegate
 				{
 					characterUtility.Jump(levelControls[schedule.level].transform, unityAction);
+                print("Here I am jumping - "+ schedule.level);
+                    
 				});
 			}
 		}

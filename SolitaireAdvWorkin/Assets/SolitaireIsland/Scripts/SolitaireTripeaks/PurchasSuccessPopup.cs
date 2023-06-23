@@ -61,5 +61,10 @@ namespace SolitaireTripeaks
 		{
 			SingletonClass<MySceneManager>.Get().Popup<PurchasSuccessPopup>("Scenes/Pops/PurchasSuccessPopup").OnStart(commoditys, unityAction);
 		}
-	}
+            public static void ShowEndGame(PurchasingCommodity[] commoditys, UnityAction unityAction = null)
+        {
+            SingletonClass<MySceneManager>.Get().Popup<PurchasSuccessPopup>("Scenes/Pops/GameEndPopup").abc();
+        }
+        public void abc() { }
+    }
 }

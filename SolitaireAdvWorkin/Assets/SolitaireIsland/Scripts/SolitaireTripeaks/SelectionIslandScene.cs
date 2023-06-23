@@ -87,7 +87,8 @@ namespace SolitaireTripeaks
 				GameObject gameObject = UnityEngine.Object.Instantiate(thumbnailAssetBundle.LoadAsset<GameObject>("IsLandThumbnail"));
 				gameObject.transform.SetParent(Points[i].transform, worldPositionStays: false);
 				gameObject.transform.localPosition = Vector3.zero;
-				Points[i].SetLock(PlayData.Get().IsLock(worldIndex, i));
+                Points[i].SetLock(PlayData.Get().IsLock(worldIndex, i));
+				//Points[i].SetLock(PlayData.Get().IsLock(worldIndex, i));
 				IsLandThumUI component = gameObject.GetComponent<IsLandThumUI>();
 				component.SetInfo(worldIndex, worldConfig.chapters.IndexOf(chapterConfig), delegate(int cha)
 				{
@@ -166,7 +167,7 @@ namespace SolitaireTripeaks
 			{
 				if (chapter > IsLandThumUIs.Count - 1)
 				{
-					TipPopupNoIconScene.ShowDataDownloading("JumpTo");
+					//TipPopupNoIconScene.ShowDataDownloading("JumpTo");
 				}
 				else
 				{

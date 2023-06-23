@@ -13,6 +13,8 @@ namespace SolitaireTripeaks
 
 		private void Awake()
 		{
+            print("PackData.Get().GetCommodity(Type)  = "+ PackData.Get().GetCommodity(Type));
+        
 			if (Label == null)
 			{
 				Label = GetComponent<Text>();

@@ -82,8 +82,33 @@ namespace SolitaireTripeaks
 				ExpertWorldConfig worldConfig = SingletonClass<ExpertLevelConfigGroup>.Get().GetWorldConfig();
 				return worldConfig.GetLevelConfig(schedule);
 			}
-			UnityEngine.Debug.Log($"@LOG GetLevelConfig world:{schedule.world}, chapter:{schedule.chapter}, level:{schedule.level}".Color(Color.blue));
-
+            if (PlayerPrefs.HasKey($"GetLevelConfig world:{schedule.world}, chapter:{schedule.chapter}, level:{schedule.level}"))
+            {
+                UnityEngine.Debug.Log("not exists.....");
+            }
+            else if (schedule.level == 0)
+            {
+                PlayerPrefs.SetString($"GetLevelConfig world:{schedule.world}, chapter:{schedule.chapter}, level:{schedule.level}",$"GetLevelConfig world:{schedule.world}, chapter:{schedule.chapter}, level:{schedule.level}");
+                UnityEngine.Debug.Log("existss....."+$"GetLevelConfig world:{schedule.world}, chapter:{schedule.chapter}, level:{schedule.level}");
+            
+               //PurchasSuccessPopup.ShowPurchasSuccessPopup(new PurchasingCommodity[1]
+                    //{
+                    //    new PurchasingCommodity
+                    //    {
+                    //        boosterType = BoosterType.RandomBooster,
+                    //        count = 1
+                    //    }
+                    //});
+                    SessionData.Get().PutCommodity(BoosterType.RandomBooster, CommoditySource.Buy, 1L);
+               }
+            //if (schedule.chapter == 5 && schedule.level == 2)
+            if (schedule.chapter == 9 && schedule.level == 39)
+            {
+                PlayerPrefs.SetInt("EndGame", 1);
+            
+                 UnityEngine.Debug.Log("EndGame I am correct data .... - "+ PlayerPrefs.GetInt("EndGame"));
+            }
+            UnityEngine.Debug.Log($"@LOG GetLevelConfig world:{schedule.world}, chapter:{schedule.chapter}, level:{schedule.level}".Color(Color.blue));
 			return UniverseConfig.Get().GetChapterConfig(schedule.world, schedule.chapter).GetLevelConfig(schedule.level);
 		}
 

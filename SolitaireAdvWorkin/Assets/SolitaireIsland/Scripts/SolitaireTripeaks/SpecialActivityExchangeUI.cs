@@ -44,12 +44,12 @@ namespace SolitaireTripeaks
 				ExchangeRewardCount.text = localizationUtility.GetString("Poker");
 				ExchangeImageDes.gameObject.SetActive(value: false);
 			}
-			else if (config.boosterType == BoosterType.DoubleStar)
-			{
-				ExchangeImageDes.gameObject.SetActive(value: false);
-				ExchangeImage.sprite = AppearNodeConfig.Get().GetBoosterMiniSprite(config.boosterType);
-				ExchangeRewardCount.text = localizationUtility.GetString("x3 hours");
-			}
+			//else if (config.boosterType == BoosterType.DoubleStar)
+			//{
+			//	ExchangeImageDes.gameObject.SetActive(value: false);
+			//	ExchangeImage.sprite = AppearNodeConfig.Get().GetBoosterMiniSprite(config.boosterType);
+			//	ExchangeRewardCount.text = localizationUtility.GetString("x3 hours");
+			//}
 			else
 			{
 				ExchangeImageDes.gameObject.SetActive(value: false);

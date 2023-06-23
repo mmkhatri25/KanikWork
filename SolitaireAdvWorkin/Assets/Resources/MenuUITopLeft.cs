@@ -141,8 +141,10 @@ namespace SolitaireTripeaks
 
 		public void StoreClick()
 		{
+            
+        //PackData.Get().AddBoosterType(BoosterType.RandomBooster);
 			//StoreScene.ShowStore();
-        PackData.Get().GetCommodity(BoosterType.Coins).Set(CommoditySource.Free, 100000);
+        //PackData.Get().GetCommodity(BoosterType.Coins).Set(CommoditySource.Free, 100000);
             
 		}
 	}

@@ -40,7 +40,7 @@
     },
     {
         "key": "cards_golden_title",
-        "English": "Golden Card",
+        "English": "Golden Card (Bella Card)",
         "German": "Goldene Karte",
         "Spanish": "Carta dorada",
         "French": "Carte dorée"
@@ -54,7 +54,7 @@
     },
     {
         "key": "cards_rocket_title",
-        "English": "Rocket Card",
+        "English": "Rocket Card (Bella Card)",
         "German": "Raketenkarte",
         "Spanish": "Carta misil",
         "French": "Carte Fusée"
@@ -68,7 +68,7 @@
     },
     {
         "key": "cards_fox_title",
-        "English": "Fox Card",
+        "English": "Fox Card (Bella Card)",
         "German": "Fuchskarte",
         "Spanish": "Carta zorro",
         "French": "Carte Renard"
@@ -82,7 +82,7 @@
     },
     {
         "key": "cards_red_title",
-        "English": "Red",
+        "English": "Red (Bella Card)",
         "German": "Rot",
         "Spanish": "Rojo",
         "French": "Rouge"
@@ -96,7 +96,7 @@
     },
     {
         "key": "cards_black_title",
-        "English": "Black",
+        "English": "Black (Bella Card)",
         "German": "Schwarz",
         "Spanish": "Negro",
         "French": "Noir"
@@ -198,7 +198,7 @@
     },
     {
         "key": "booster_tongyong_desc",
-        "English": "Shell can be exchanged for any booster."
+        "English": "Shell can be exchanged for any booster. Shell is collected at the start of each island when you press the first level. It’s only collected once. Shell is also collected through treasure chest and lucky wheel."   
     },
     {
         "key": "booster_magic_eye_title",
@@ -206,7 +206,7 @@
     },
     {
         "key": "booster_magic_eye_desc",
-        "English": "Get at least one random BELLA CARD in the game."
+        "English": "Get at least one random BELLA CARD  in the game. To know more about BELLA CARDS refer to help."
     },
     {
         "key": "booster_full_flip_title",
@@ -309,7 +309,7 @@
     },
     {
         "key": "hazards_vine_desc",
-        "English": "Slice the vines, then collect the Card quick!\nAfter few seconds the vines will grow again.",
+        "English": "Slice the Vines, then collect the Card Quickly ! After a few seconds the vines will grow again.",
         "German": "Slice the vines, then collect the Card quick!\nAfter few seconds the vines will grow again.",
         "Spanish": "Slice the vines, then collect the Card quick!\nAfter few seconds the vines will grow again.",
         "French": "Slice the vines, then collect the Card quick!\nAfter few seconds the vines will grow again."
@@ -334,7 +334,7 @@
     },
     {
         "key": "booster_batter_defender_desc",
-        "English": "Clear Maple Leaf from all Mapleaf Card"
+        "English": "Clear Maple Leaf from all Maple Leaf Card"
     },
     {
         "key": "booster_lock_defender_title",
